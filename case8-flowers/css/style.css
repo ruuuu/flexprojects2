@@ -72,12 +72,29 @@ p {
     line-height: 33px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
+    
+    
+    position: relative;
+    
 }
 
+.section-title::after{/*псевдоэлемент горизонтальня нижняя черта*/
+    content: "";
+    position: absolute;
+    
+    bottom:-10px;
+    left: 670px;
+    
+    width: 85px;
+    height: 1px;
+   
+    
+    border-bottom: 1px solid #ffffff;
+    
+}
 
 .container {
-    width: 1520px;/*1730*/
+    width: 1440px;/*1730*/
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -116,9 +133,14 @@ p {
     margin-top: 24px;
 }
 
+.site-navigation__link{
+    text-transform: uppercase;
+}
+
 
 .phone{
     margin-left: auto;/*флекс элемнет прижмется  кправому краю*/
+    margin-top: 20px;
 }
 
 
@@ -152,14 +174,43 @@ p {
 .main-link {
     transform-origin: 0 0;
     transform: translateX(100%) rotate(90deg);
-
+    border: none;
+    width: 140px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+.main-link::after{/*псевдэлемент является флекс элеметом */
+    content: "";
+
+    width: 14px;
+    height: 20px;
+
+    transform: translateX(100%) rotate(-90deg);/*переворачиваем стрелку*/
+    /*background-position: bottom center;*/
+    background-repeat: no-repeat;
+    
+    background-image: url("../img/arrowdown.svg");
+    
+    align-self: flex-end;
+}
+
+
+
 .social-list__item{
+   display: flex;
+    width: 25px;
+    height: 25px;
+    
     padding: 0;
     padding-top: 30px;
     padding-bottom: 10px;
 }
+
+
+
+
 
 
 .catalog{
