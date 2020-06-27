@@ -72,25 +72,25 @@ p {
     line-height: 33px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    
-    
+
+
     position: relative;
-    
+
 }
 
 .section-title::after{/*псевдоэлемент горизонтальня нижняя черта*/
     content: "";
     position: absolute;
-    
+
     bottom:-10px;
     left: 670px;
-    
+
     width: 85px;
     height: 1px;
-   
-    
+
+
     border-bottom: 1px solid #ffffff;
-    
+
 }
 
 .container {
@@ -190,9 +190,9 @@ p {
     transform: translateX(100%) rotate(-90deg);/*переворачиваем стрелку*/
     /*background-position: bottom center;*/
     background-repeat: no-repeat;
-    
+
     background-image: url("../img/arrowdown.svg");
-    
+
     align-self: flex-end;
 }
 
@@ -202,7 +202,7 @@ p {
    display: flex;
     width: 25px;
     height: 25px;
-    
+
     padding: 0;
     padding-top: 30px;
     padding-bottom: 10px;
@@ -577,7 +577,7 @@ p {
 .certificate__text{/*флекс конетенр, чтобы узор был флекс элементом*/
     padding-top: 70px;
     padding-right: 35px;
-    
+
     padding-left: 35px;
 
     font-style: normal;
@@ -589,18 +589,18 @@ p {
     text-align: center;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .certificate__text::before{/*псевдоэлемент является флекс элементом*/
     content: "";
     width: 306px;
     height: 61px;
-    
+
     background-image: url("../img/Group.png");
     background-position: center;
     background-repeat: no-repeat;
-    
+
     order: 1;
     padding-top: 40px;
 
@@ -634,7 +634,7 @@ p {
 .partners__item{
     margin-right: 33px;
     margin-bottom: 35px;
-    flex-grow: 1; /*флекс лемент будем растязгиваться*/
+    flex-grow: 1; /*флекс элемент будем растязгиваться*/
 }
 
 .partners__link{
@@ -672,7 +672,7 @@ p {
 }
 
 .nav-item{
-    margin-right: 50px; 
+    margin-right: 50px;
 }
 
 .nav-item:last-child{
@@ -718,7 +718,7 @@ p {
 }
 
 .social-link--fb{
-    background-image: url(../img/fb.svg);
+    background-image: url("../img/fb.svg");
 }
 
 .social-link--watsapp{

@@ -1,8 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-   
-    font-family: "Montserrat", sans-serif;
+    min-width: 1180px;
+
+    font-family: "Montserrat", "Arial", sans-serif;
     font-weight: normal;
     font-size: 14px;
     line-height: 27px;
@@ -49,13 +50,13 @@ p {
     padding: 20px;
     padding-left: 30px;
     padding-right: 30px;
-    font-family: "Forum", "Arial", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
+    background-color: #8E80A9;
 
     color: #FFFFFF;
     border: 1px solid #ffffff;
@@ -67,12 +68,16 @@ p {
 .section-title{
     text-align: center;
     margin-bottom: 50px;
-   
-    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 15px;
+
+
 }
 
 .container {
-    width: 1140px;
+    width: 1160px;
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -85,10 +90,10 @@ p {
 
 .main-header__logo{
     display: inline-block;
-    width: 181px;
-    height: 116px;
-    padding-top: 16px;
-    
+    width: 126px;
+    height: 48px;
+    padding-top: 46px;
+
 }
 
 .site-navigation{
@@ -103,24 +108,79 @@ p {
 
 .site-navigation__item{
     margin-right: 30px;
-    margin-top: 24px;
+    margin-top: 54px;
+}
+
+
+.site-navigation__link{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    text-transform: uppercase;
+    color: #8B7EAC;
+
+    text-shadow: 0px 0px 20px #ECE7EC;
 }
 
 .phone{
     margin-left: auto;/*флекс элемнет прижмется  кправому краю*/
-    margin-top: 20px;
+    margin-top: 54px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 0px;
+    color: #8B7EAC;
 }
 
 .title-wrapper{
     display: flex;
     flex-direction: column;
+
     margin-top: 121px;
     margin-bottom: 131px;
+    margin-left: 160px;
+
+
 }
 
+.main-title{
+    font-family: "Caveat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 0px;
+
+    margin-bottom: 60px;
+
+}
+
+.promo-title{
+    font-weight: 500;
+    font-size: 265px;
+    line-height: 265px;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
 
 .main__button-wrapper{
     align-self: center;
+}
+
+.main__button-wrapper a{
+    display: inline-block;
+    width: 207px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+
+    color: #E65C7B;
 }
 
 .main-navigation-wrapper{
@@ -135,16 +195,16 @@ p {
 }
 
 .redirection{
-    padding-top:  277px;
+    
     padding-bottom: 40px;
     /*посомтеть в customer developers как располагали несколкьо фонов*/
     /*background-image: url("../img/flower-2.svg"),
-     url("../img/flower-3.svg");
+    url("../img/flower-3.svg");
     background-position: center, bottom right;
     background-repeat: no-repeat;
     background-size: ;
     background-color: transparent;*/
-    
+
 }
 
 .redirection__list{
@@ -152,16 +212,17 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .redirection__item{
     display: flex;
     flex-direction: column;
-    
+
     margin-right: 30px;
-    
+
     margin-bottom: 30px;
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
 }
 
 .redirection__item:nth-child(3n){
@@ -204,23 +265,23 @@ p {
     display: flex;
     justify-content: center;/*чтоб спсиок центровался*/
     align-items: center;/*чтоб спсиок центровался*/
-    
+
 }
 
 
 .abonements__item{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 265px;
-    padding: 20px;
+    padding: 30px;
     padding-top: 58px;
-    
+
     background-color: #ffffff;
     margin-right: 50px;
     flex-wrap: wrap;
-    
+
     box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
 }
 
@@ -228,6 +289,61 @@ p {
     width: 300px;
 }
 
+
+.abonements__title{
+    font-size: "Abhaya Libre";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+
+.abonements__item--big .abonements__title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+
+
+.abonements__active{
+    width: 173px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+
+
+    text-align: center;
+
+    color: #E65C7B;
+    margin-bottom: 26px;
+}
+
+
+.abonements__item--big .abonements__active{
+    margin-bottom: 38px;
+}
+
+.abonements__price{
+    font-family: "Abhaya Libre";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 20px;
+    /* identical to box height, or 67% */
+
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.abonements__item--big .abonements__price{
+    margin-bottom: 50px; 
+}
 
 .our-teams{
     padding-top: 50px;
@@ -240,9 +356,10 @@ p {
 
 
 .our-teams-wrapper{
+    width: 1009px;
     display: flex;
     box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
-    
+
     margin-bottom: 30px;
 }
 
@@ -253,11 +370,48 @@ p {
 
 .our-teams__text-column{
     padding: 20px;
+    width: 639px;
 }
+
+.mentor__name{
+    font-family: "Abhaya Libre";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+}
+
+
+.mentor__stage{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+
+    color: #E65C7B;
+}
+
+
+.mentor__description{
+    width: 558px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.mentor__description-part{
+   margin-bottom: 20px; 
+}
+
 
 .text-title-wrapper{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .gallery-button{
@@ -290,13 +444,324 @@ p {
 
 .gallery__list{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+
     flex-wrap: wrap;
-    width: 1009px;
+    width: 1063px;
+    margin: 0 auto;
 }
 
 .gallery__item{
     margin-right: 10px;
-    margin-bottom: 10px;
+
+}
+
+.gallery__item:nth-child(4n){
+    margin-right: 0;
+}
+
+.gallery-img{
+    width: 100%;
+    object-fit: cover;/*Чтобы изображения увеличивалось только по ширине и при этом сохраняло свои пропорции при заполнении блока */
+}
+
+
+.reviews{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.reviews__list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 914px;
+
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.reviews__item{/*флекс элемент, котрый сам флекс конетнр*/
+    display: flex;
+    flex-direction: column;
+
+    width: 283px;
+    margin-right: 30px;
+
+    padding-left: 80px;
+    padding-right: 40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+}
+
+.reviews__item:nth-child(2n){
+    margin-right:0;
+}
+
+
+.reviews__description{
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    min-height: 140px;
+    margin-bottom: 20px;
+}
+
+.reviews__container{/*флекс элемнт котрый сам флекс контенйер*/
+    display: flex;
+    margin-top: auto;/*эдемент прижмется  книзу*/
+}
+
+.reviews-wrapper{/*флекс элемнт котрый сам флекс контенйер*/
+    display: flex;/*ятобы фтку(псевдоэлемент) сдетаь флекс элементом*/
+
+}
+
+.reviews-wrapper--first::before{/*псевоэлемент ведет себя как флекс элемент во флекс контейнре*/
+    content: "";
+
+    width: 51px;
+    height: 51px;
+
+    background-image: url("../img/beard-1845166_1280%201.jpg");
+    background-position:  left;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
+
+.reviews-wrapper--second::before{/*псевоэлемент ведет себя как флекс элемент во флекс контейнре*/
+    content: "";
+
+    width: 51px;
+    height: 51px;
+
+    background-image: url("../img/girl-1848454_1280%201.jpg");
+    background-position:  left;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+
+.wrap-for-info{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.reviews__socila-list{
+    display: flex;
+}
+
+
+.reviews__social-item{
+    width: 15px;
+    height: 10px;
+
+    display: flex;
+    margin-right: 20px;
+}
+
+.social-link{
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-link--vk{
+    background-image: url("../img/vk.svg");
+}
+
+
+.social-link--twitter{
+    background-image: url("../img/twitter.svg");
+}
+
+.reviews__name{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(230, 92, 123, 0.7);
+
+}
+
+.reviews__date{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 20px;
+    color: rgba(142, 128, 169, 0.7);
+}
+
+
+.main-footer{
+    background-image: url("../img/bg-footer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding-top: 60px;
+
+
+
+}
+
+.main-footer__first-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+
+}
+
+
+.main-footer__info-wrapper{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 186px;
+
+}
+
+.form__wrapper{
+    width: 429px;
+}
+
+
+.section-title-form{
+
+    font-family: "Abhaya Libre";
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    width: 429px;
+}
+
+
+
+
+.main-footer__second-wrapper{
+    background-color: #8373A1;
+}
+
+.second-wrapper-container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 74px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color:rgba(255, 255, 255, 0.5);
+}
+
+
+.info-list{
+    display: flex;
+    width: 350px;
+    flex-wrap: wrap;
+}
+
+.info-item{
+    margin-right: 50px;
+    margin-bottom: 32px;
+}
+
+
+.info-item:nth-child(2n){
+    margin-right: 0;
+}
+
+.info-title{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+.info-description{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+
+
+.main-footer__social-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.social-item{
+    display: flex;
+    margin-right: 10px;
+
+    width: 15px;
+    height: 10px;
+}
+
+
+
+
+.feedback-form{
+    width: 407px;
+
+}
+
+
+.feedback-form__content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+.social-link--fb{
+    background-image: url("../img/facebook.svg");
+}
+.feedback-form__input-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    width: 407px;
+}
+
+
+
+.feedback-form__input-wrapper label{
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(142, 128, 169, 0.4);
+}
+
+
+.feedback-form__input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #8E80A9;
+    transform: rotate(0.14deg);
+    background-color: transparent;
+    color: #8e80a9;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+.feedback-form__input:focus{
+    outline: none;
+}
+
+.feedback-form__button{
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #E65C7B;
 }
