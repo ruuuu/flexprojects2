@@ -66,6 +66,7 @@ p {
 }
 
 .section-title{
+    font-family: "Abhaya Libre", "Arial", sans-serif;
     text-align: center;
     margin-bottom: 50px;
     font-style: normal;
@@ -85,14 +86,15 @@ p {
 
 .main-header__nav-wrapper{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 50px;
 }
 
 .main-header__logo{
     display: inline-block;
     width: 126px;
     height: 48px;
-    padding-top: 46px;
+
 
 }
 
@@ -102,13 +104,13 @@ p {
     flex-wrap: wrap;
     align-items: flex-start;
     max-width: 665;/*чтоб не было переполнения*/
-
+    margin-top: 18px;
     margin-left: 108px;
 }
 
 .site-navigation__item{
     margin-right: 30px;
-    margin-top: 54px;
+
 }
 
 
@@ -125,9 +127,9 @@ p {
     text-shadow: 0px 0px 20px #ECE7EC;
 }
 
-.phone{
+.phone{/*флекс элемнет */
     margin-left: auto;/*флекс элемнет прижмется  кправому краю*/
-    margin-top: 54px;
+    margin-top: 25px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -140,20 +142,24 @@ p {
     flex-direction: column;
 
     margin-top: 121px;
-    margin-bottom: 131px;
+    padding-bottom:  131px;
     margin-left: 160px;
 
 
 }
 
-.main-title{
+.promo-text{
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+
     font-family: "Caveat";
     font-style: normal;
     font-weight: normal;
     font-size: 45px;
     line-height: 0px;
 
-    margin-bottom: 60px;
+
 
 }
 
@@ -166,36 +172,57 @@ p {
     text-transform: uppercase;
 }
 
-.main__button-wrapper{
-    align-self: center;
-}
-
-.main__button-wrapper a{
-    display: inline-block;
-    width: 207px;
+.promo-link{
+    display: flex;/*чтобы кнопку-псевдожлемент был флекс элементом*/
+    align-items: center;
+    margin: 0 auto;
+    width: 300px;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    /* or 143% */
-
-
     color: #E65C7B;
+}
+
+
+.promo-link::before{ /*псевдоэлемент, корый является флекс элементом*/
+    content: "";
+    width: 56px;
+    height: 48px;
+
+    flex-shrink: 0;
+    background-color: #e65e7b;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9px 17px;
+
+    margin-right: 10px;
+}
+
+
+.promo-city{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    font-style: normal;
 }
 
 .main-navigation-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 216px;
+
 }
 
 .social-list{
     display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
 }
 
-.redirection{
-    
+.yoga-groups{
+    padding-top: 100px;
     padding-bottom: 40px;
     /*посомтеть в customer developers как располагали несколкьо фонов*/
     /*background-image: url("../img/flower-2.svg"),
@@ -207,50 +234,92 @@ p {
 
 }
 
-.redirection__list{
+
+.yoga-groups-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.redirection__item{
-    display: flex;
     flex-direction: column;
 
-    margin-right: 30px;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
 
+    margin-left: 73px;
+    margin-top: 38px;
+    height: 670px;
+
+}
+
+
+.yoga-groups-item {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 30px;
-    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+    margin-right: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
 }
 
-.redirection__item:nth-child(3n){
-    margin-right: 0;
-}
-
-
-.redirection__item:nth-child(2){
-    padding-bottom: 40px;
-}
-
-.redirection__item img{
+.yoga-groups-item img{
     object-fit: cover;
     width: 100%;
 }
 
-.redirection__info{
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
+.yoga-groups-wrapper{
     padding: 20px;
 }
 
-.redirection__wrapper{/*флекс элемент*/
+.yoga-groups-item-title {
+    margin-bottom: 10px;
+    font-family: "Abhaya Libre", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 15px;
+    color: #8e80a9;
+}
+
+.yoga-groups-item-timetable {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #8e80a9;
+}
+
+.yoga-groups-item-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: auto;/*флекс элемент прижмется  книзу*/
+
 }
+
+.yoga-groups-name-instructor{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #E65C7B;
+}
+
+.yoga-groups-item-instructor {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #e65e7b;
+}
+
+
+.yoga-groups-item-link {/*флекс элемент*/
+    flex-shrink: 0;
+    width: 45px;
+    height: 30px;
+
+    background-color: #8e80a9;
+    background-image: url("../img/arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px 13px; /* размеры стрлочки*/
+}
+
 
 
 .abonements{
@@ -263,8 +332,10 @@ p {
 
 .abonements__list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;/*чтоб спсиок центровался*/
-    align-items: center;/*чтоб спсиок центровался*/
+    align-items: flex-start;/*чтоб спсиок центровался*/
+
 
 }
 
@@ -343,6 +414,9 @@ p {
 
 .abonements__item--big .abonements__price{
     margin-bottom: 50px; 
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 20px;
 }
 
 .our-teams{
@@ -359,7 +433,7 @@ p {
     width: 1009px;
     display: flex;
     box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
-
+    margin: 0 auto;
     margin-bottom: 30px;
 }
 
@@ -404,7 +478,7 @@ p {
 }
 
 .mentor__description-part{
-   margin-bottom: 20px; 
+    margin-bottom: 20px; 
 }
 
 
@@ -414,13 +488,49 @@ p {
     margin-bottom: 30px;
 }
 
-.gallery-button{
-    margin-bottom: 30px;
+.our-team__nav{
+    width: 200px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
+
+.our-team-card__nav-button{
+    width: 45px;
+    height: 30px;
+    border: 1px solid #8E80A9;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 13px;
+    background-color: #8E80A9;
+}
+
+
+.nav-button--prev{
+    transform: rotate(-180deg);/*повернули на 180град*/
+}
+
+
+.button-active{
+    background-color: #8E80A9;
+
+    background-image: url("../img/arrow-active.svg");
+    background-size: 8px 13px;*/
+}
+
+
+.our-team__page-counter{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8e80a9;
+}
 
 .preview__list{
     display: flex;
@@ -443,16 +553,22 @@ p {
 }
 
 .gallery__list{
-    display: flex;
-    justify-content: flex-start;
 
+
+    display: flex;
     flex-wrap: wrap;
-    width: 1063px;
-    margin: 0 auto;
+    margin: 15px 44px 0 45px;
+    padding: 30px 20px 20px 30px;
+
+    box-shadow: 0 0 5px #f0ebf9;
+    border-radius: 10px;
 }
 
-.gallery__item{
+.gallery__item{/*флекс элеент*/
+    display: flex;
+    flex-flow: 1;
     margin-right: 10px;
+    margin-bottom: 10px;
 
 }
 
@@ -473,6 +589,7 @@ p {
 
 .reviews__list{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     width: 914px;
 
@@ -492,6 +609,7 @@ p {
     padding-top: 80px;
     padding-bottom: 40px;
     box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+    background-color: #ffffff;
 }
 
 .reviews__item:nth-child(2n){
@@ -510,6 +628,7 @@ p {
 
 .reviews__container{/*флекс элемнт котрый сам флекс контенйер*/
     display: flex;
+    align-items: flex-end;
     margin-top: auto;/*эдемент прижмется  книзу*/
 }
 
@@ -560,7 +679,7 @@ p {
     height: 10px;
 
     display: flex;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 .social-link{
@@ -594,40 +713,52 @@ p {
     color: rgba(142, 128, 169, 0.7);
 }
 
+.reviews-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.main-footer{
+.reviews-nav-button{
+    margin: 0 15px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 13px;
+}
+
+
+
+
+.main-footer-top{
     background-image: url("../img/bg-footer.png");
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 auto;
-    padding-top: 60px;
-
-
+    background-size: 100%;
 
 }
 
-.main-footer__first-wrapper{
+.main-footer-top-wrapper{
     display: flex;
     justify-content: flex-start;
-    margin: 0 auto;
+    padding-bottom: 65px;
 
 }
 
 
-.main-footer__info-wrapper{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 186px;
-
+.contacts-wrapper{
+    width: 545px;
+    margin: 170px 10px 0 135px;
 }
 
 .form__wrapper{
-    width: 429px;
+
+    margin-left: 65px;
 }
 
 
 .section-title-form{
-
+    margin-top: 50px;
     font-family: "Abhaya Libre";
     font-weight: bold;
     font-size: 30px;
@@ -636,17 +767,8 @@ p {
     width: 429px;
 }
 
+.main-footer-bottom{
 
-
-
-.main-footer__second-wrapper{
-    background-color: #8373A1;
-}
-
-.second-wrapper-container{
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 74px;
 
@@ -654,33 +776,43 @@ p {
     font-size: 12px;
     line-height: 20px;
     color:rgba(255, 255, 255, 0.5);
+    background-color: #8373A1;
 }
 
 
-.info-list{
+.main-footer-bottom-wrapper{
+
     display: flex;
-    width: 350px;
+    margin-left: 135px;
+    margin-right: 30px;
+}
+
+
+
+.contacts-list{
+    display: flex;
     flex-wrap: wrap;
 }
 
-.info-item{
+.contacts-item{
     margin-right: 50px;
     margin-bottom: 32px;
+    min-width: 161px;
 }
 
 
-.info-item:nth-child(2n){
+.contacts-item:nth-child(2n){
     margin-right: 0;
 }
 
-.info-title{
+.contacts-title{
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
 }
 
 
-.info-description{
+.contacts-description{
     font-weight: 500;
     font-size: 12px;
     line-height: 20px;
@@ -707,6 +839,8 @@ p {
 
 .feedback-form{
     width: 407px;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -764,4 +898,9 @@ p {
     font-size: 14px;
     line-height: 20px;
     background-color: #E65C7B;
+}
+
+
+.copyright{
+    margin-left: auto;
 }
