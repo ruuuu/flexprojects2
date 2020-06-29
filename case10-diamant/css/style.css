@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 1420px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 31px;
+
+    color: #888794;
+    background-color: #ffffff;
+
+
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Forum", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    border: 1px solid #ffffff;
+
+
+
+}
+
+.section-title{
+    text-align: center;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 70px;
+    line-height: 77px;
+    color: #757AA5;
+
+}
+
+
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-header{
+    background-color: #F7F7FA;
+}
+
+.main-header__nav-wrapper{
+    display: flex;
+}
+
+.main-header__logo{
+    margin-top: 12px;
+}
+
+.site-navigation{
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-items: center;
+    max-width: ;/*чтоб не было переполнения*/
+
+    margin-left: 70px;
+
+}
+
+.site-navigation__item{
+    margin-right: 30px;
+
+}
+
+
+.site-navigation__link{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    text-transform: uppercase;
+    color: #8B7EAC;
+
+    text-shadow: 0px 0px 20px #ECE7EC;
+}
+
+
+.main-header__links-part{
+    display: flex;
+    margin-left: auto;/*флекс элемент прижмется  к правому краю*/
+    align-items: center;
+}
+
+
+.links-wrapper{
+    display: flex;
+}
+
+.linkl{
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 38px;
+
+    /* violet for title */
+
+    color: #515076;
+}
+
+
+
+
+.promo__title{
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 230px;
+    line-height: 213px;
+
+
+    display: flex;
+    align-items: center;
+
+    color: #515076;
+    
+    padding-top: 128px;
+    padding-bottom: 60px; 
+}
+
+
+.products{
+
+    padding-bottom: 40px;
+}
+
+
+.products__list{
+    display: flex;
+    align-items: flex-end;
+    width: 1098px;
+    margin: 0 auto;
+
+}
+
+.products__item{
+    margin-right: 30px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 62px;
+    padding-bottom: 20px;
+
+    background-color: #F7F7FA;
+}
+
+.products__item:nth-child(3n){
+    margin-right: 0;
+}
+
+.products__item--big{
+    padding-top: 69px;
+}
+
+
+.portfolio__text-column{
+
+}
