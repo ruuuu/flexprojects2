@@ -116,7 +116,7 @@ p {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    /* identical to box height, or 125% */
+
 
     text-transform: uppercase;
     color: #8B7EAC;
@@ -142,9 +142,6 @@ p {
     font-weight: 500;
     font-size: 16px;
     line-height: 38px;
-
-    /* violet for title */
-
     color: #515076;
 }
 
@@ -163,15 +160,24 @@ p {
     align-items: center;
 
     color: #515076;
-    
+
     padding-top: 128px;
     padding-bottom: 60px; 
 }
 
 
 .products{
-
     padding-bottom: 40px;
+    padding-top: 200px;
+
+    background-image: url("../img/bg-catalog.png");
+    background-size: 738px 619px;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.products .section-title{
+    margin-bottom: 60px;
 }
 
 
@@ -202,7 +208,201 @@ p {
     padding-top: 69px;
 }
 
+.products__img{
+    width: 289px;
+    height: 244px;
+}
 
-.portfolio__text-column{
+.products__item--big .products__img{
+    width: 340px;
+    height: 325px;
+}
 
+
+.action{
+    padding-bottom: 145px;
+    background-image: url("../img/bg-sales.png");
+    background-repeat: no-repeat;
+    background-position: 0px 550px; /*отсчет идет от леовго верхнего угла*/
+}
+
+.action__wrapper{
+    display: flex;
+    justify-content: flex-start;
+    width: 1176px;
+    margin: 0 auto;
+    margin-bottom: 250px;
+
+}
+
+.action__text-column{/*флекс элемент*/
+    width: 333px;
+    margin-right: 200px;
+    flex-shrink: 0;
+
+}
+
+.action-title{
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.action__text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.action__image-column{
+    width: 750px;
+    background-color: #F7F7FA;
+    box-shadow: -40px 40px 0px #515076;
+    padding-top: 40px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 62px;
+
+}
+
+.action__image-column__wrapper{
+    display: flex;
+}
+
+.text-wrapper{
+    width: 400px;
+}
+
+
+.text-description{
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 39px;
+    color: #4c5072;
+}
+
+.text-little{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #888794;
+}
+
+.img-wrapper{
+    width: 296px;
+}
+
+
+
+.action__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.action__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;/*ширина контента*/
+
+    padding-top: 0;
+    margin-right: 30px;
+    background-color: #F7F7FA;
+}
+
+.action__content-wrapper{
+    padding: 40px;
+}
+
+.action__item:nth-child(3n){
+    margin-right: 0;
+}
+
+
+.action__item--first{
+
+}
+
+.action__item--second{
+    padding-top: 74px;
+}
+
+.action__item--third{
+    padding-top: 107px;
+}
+
+
+
+.sales{
+    width: 220px;
+    font-size: 36px;
+    line-height: 49px;
+    color: #515076;
+}
+
+
+.action__item--first .sales{
+    background-color: rgba(81, 80, 118, 0.1);
+    padding: 65px 25px;
+}
+
+
+.action__item--second .sales{
+    width: 238px;
+    background-color: rgba(81, 80, 118, 0.15);
+    padding: 50px 45px;
+}
+
+
+.action__price-wrapper{/*флекс элемент, котрый самф лекс контенер*/
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;/*элемент прижмется  книжнему краю*/
+}
+
+
+.action__price-wrapper::after{
+    content: "";
+    width: 28px;
+    height: 28px;
+
+    background-image: url("../img/bucket.svg");
+
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: right;
+}
+
+.action__description{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #515076;
+    margin-bottom: 20px;
+}
+
+
+
+
+.profits{
+    background-color: #EDECF6;
+    background-image: url("../img/dg-profits.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;/*правый нижний угол*/
+    background-size: 638px 1196px;
+}
+
+
+.profits__title{
+    margin-top: -20px;
+    font-family: "Playfair Display", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 330px;
+    line-height: 305px;
+    color: #d6d4e7;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #ffffff 210px, transparent 210px, transparent 100%);
 }

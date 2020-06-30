@@ -422,10 +422,13 @@ p {
 .our-teams{
     padding-top: 50px;
     padding-bottom: 50px; 
-    background-image: url("../img/bg-team.png");
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: contain;
+    background-image: url("../img/bg-team.png"),
+                      url("../img/bg-team-2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center left, center right;
+    background-size: 1081px 1326px, 576px 514px;
+    position: relative;
+    
 }
 
 
