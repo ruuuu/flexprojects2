@@ -53,9 +53,31 @@
 
 
         <main>
-            <section class="promo">
+            <div class="container">
+                <h1 class="promo__title">Diamaint</h1>
+            </div>
+            
+            <section class="about">
                 <div class="container">
-                    <h1 class="promo__title">Diamaint</h1>
+                    <div class="about__wrapper"><!--флекс контенейр -->
+                        <div class="about-column"><!--флекс элемент, сам флекс контейнер -->
+                            <h3 class="about-column__title">Натуральная косметика с привкусом Ирландии</h3>
+                            <p class="about-column__text">Ингридиенты контролируются по качеству и происхождению. Большинство из них имеют органический сертификат Ecoсert и Soil Association. Сочетание компонентов в каждой линейке подобрано с учетом особенностей типа кожи.</p>
+                        </div>
+                        
+                        <div class="about-column"><!--флекс элемент, сам флекс контейнер -->
+                            <p class="about-column__text definition">Diamaint — <span>одуванчик</span> в переводе с ирландского</p>
+                            <p class="about-column__text">Косметика, после которой вы уже никогда не будете прежней и обретёте новую жизнь, где наша продукция будет вашим верным спутником и помощником<br><br></p>
+                            <p class="about-column__text">Используем всю силу природы, а так же новейшие разработки индустрии вкупе традиционными ирландскими рецептами для того, чтобы придать вашей коже здоровый и цветущий вид</p>
+                            <a class="button about-column__button" href="">Выбрать продукт</a>
+                            <p class="about-column__text">В основе — активные натуральные комплексы, витамины С, А, РР, В И Е, масла, воски, минералы и натуральные солнцезащитные компоненты.</p>
+                        </div>
+                        
+                        <div class="about-column"><!--флекс элемент, сам флекс контейнер -->
+                            <p class="about-column__note">Подбираем комплекс специально для вашего типа кожи</p>
+                            <h3 class="about-column__slogan"> Diamaint — только натуральные ингридиенты</h3>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -67,11 +89,11 @@
                         <li class="products__item">
                             <img class="products__img" src="img/product1.png" width="289" height="244" alt="">
                             <div class="products__info">
-                                <p class="products__skin"></p> 
+                                <p class="products__skin">Для нормальной кожи</p> 
                                 <p class="products__name">Увлажняющий мусс</p>
                                 <div class="products__price-wrapper">
                                     <p class="product__price"> 2750р </p>
-                                    <img src="" width="" height="" alt=""><!--корзина -->
+                                    <!--корзина псевдоэлемент -->
                                 </div>
                             </div>
                         </li> 
@@ -79,11 +101,11 @@
                         <li class="products__item products__item--big">
                             <img class="products__img" src="img/product2.png" width="340" height="325" alt="">
                             <div class="products__info">
-                                <p class="products__skin"></p> 
-                                <p class="products__name">Увлажняющий мусс</p>
+                                <p class="products__skin">Для нормальной кожи</p> 
+                                <p class="products__name">Увлажняющая маска</p>
                                 <div class="products__price-wrapper">
                                     <p class="product__price"> 2750р </p>
-                                    <img src="" width="" height="" alt=""><!--корзина -->
+                                    <!--корзина -->
                                 </div>
                             </div>
                         </li> 
@@ -91,11 +113,11 @@
                         <li class="products__item">
                             <img class="products__img" src="img/product3.png" width="289" height="241" alt="">
                             <div class="products__info">
-                                <p class="products__skin"></p> 
-                                <p class="products__name">Увлажняющий мусс</p>
+                                <p class="products__skin">Для нормальной кожи</p> 
+                                <p class="products__name">Гель для умывания</p>
                                 <div class="products__price-wrapper">
                                     <p class="product__price"> 2750р </p>
-                                    <img src="" width="" height="" alt=""><!--корзина -->
+                                    <!--корзина -->
                                 </div>
                             </div>
                         </li>   
@@ -137,13 +159,14 @@
                             <div class="sales">
                                 скидка  5%
                             </div>
-
                             <img class="action__img" src="img/action1.png" width="350" height="305" alt="">
                             <div class="action__content-wrapper">
                                 <p class="action__description">Приобретая увлажняющий крем и маску, вы получаете скидку 5% на весь товар </p>
                                 <div class="action__price-wrapper">
-                                    <p class="action__price">5000<span> 4750р</span></p>
-                                    <!-- коризина, сделать псевдожлемнтом, будет флек элемент-->
+                                    <p class="action__price">
+                                        <del>5000</del>
+                                        <span> 4750р</span></p>
+                                    <!-- коризина, сделать псевдоэлемнтом, будет флек элемент-->
                                 </div>
                             </div>
                         </li>
@@ -156,8 +179,10 @@
                             <div class="action__content-wrapper">
                                 <p class="action__description">Приобретая увлажняющий крем и маску, вы получаете скидку 5% на весь товар </p>
                                 <div class="action__price-wrapper">
-                                    <p class="action__price">5000<span> 4750р</span></p>
-                                    <!-- коризина, сделать псевдожлемнтом, будет флек элемент-->
+                                    <p class="action__price">
+                                        <del>5000</del>
+                                        <span> 4750р</span></p>
+                                    <!-- коризина, сделать псевдоэлемнтом, будет флек элемент-->
                                 </div>
                             </div>
                         </li>
@@ -170,8 +195,10 @@
                             <div class="action__content-wrapper">
                                 <p class="action__description">Приобретая увлажняющий крем и маску, вы получаете скидку 5% на весь товар </p>
                                 <div class="action__price-wrapper">
-                                    <p class="action__price">5000<span> 4750р</span></p>
-                                    <!-- коризина, сделать псевдожлемнтом, будет флек элемент-->
+                                    <p class="action__price">
+                                        <del class="old-price">5000</del>
+                                        <span> 4750р</span></p>
+                                    <!-- коризина, сделать псевдоэлемнтом, будет флек элемент-->
                                 </div>
                             </div>
                         </li>
@@ -209,14 +236,14 @@
                             </li> 
                             <li class="advices__item">
                                 <p class="advices__main-title">Совет</p>
-                                <p class="advices__title">Как выбрать крем</p>
-                                <p class="advices__description">7 критериев правильного выбора. Под воздействием окружающей среды кожа теряет питательные вещества... </p>
+                                <p class="advices__title">Что добавить к зимнему уходу</p>
+                                <p class="advices__description">Зимой кожа лица особенно остро нуждается в уходе. Холод и ветер, сухость воздуха отапливаемых помещений и постоянные перепады температур, возникающие при выходе на улицу, — вот основные неприятели, от которых требуется надежная защита в зимнее время года.</p>
                                 <a class="advices__link" href="">Читать</a>
                             </li> 
                             <li class="advices__item">
                                 <p class="advices__main-title">Совет</p>
-                                <p class="advices__title">Как выбрать крем</p>
-                                <p class="advices__description">7 критериев правильного выбора. Под воздействием окружающей среды кожа теряет питательные вещества... </p>
+                                <p class="advices__title">Как узнать свой тип кожи</p>
+                                <p class="advices__description">У одних кожа от природы жирная, у других сухая и тонкая, считается, что в современных условиях нормальная кожа встречается очень редко, чаще комбинированная. Кожа может вести себя по-разному в зависимости от времени года и температурных и погодных условий.</p>
                                 <a class="advices__link" href="">Читать</a>
                             </li> 
                             <li class="advices__item">
@@ -265,22 +292,22 @@
         </main>
 
         <footer class="main-footer">
-           <div class="container">
-               <div class="contacts">
-                   <p class="contacts__title">Контакты</p>
-                   <p class="contacts__phone">+7 495 550 50 50 </p>
-                   <p class="contacts__address">Москва, Пресенеский Вал 21 </p>
-                   <ul class="contacts__solical-list">
-                       <li class="solical-list-item">
-                           <a class="social-list-link social-link-fb" href=""></a>
-                       </li>
-                       <li>
-                           <a class="social-list-link social-link-insta" href=""></a>
-                       </li>
-                       
-                   </ul>
-               </div>
-           </div>
+            <div class="container">
+                <div class="contacts">
+                    <p class="contacts__title">Контакты</p>
+                    <p class="contacts__phone">+7 495 550 50 50 </p>
+                    <p class="contacts__address">Москва, Пресенеский Вал 21 </p>
+                    <ul class="contacts__solical-list">
+                        <li class="solical-list-item">
+                            <a class="social-list-link social-link-fb" href=""></a>
+                        </li>
+                        <li>
+                            <a class="social-list-link social-link-insta" href=""></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
 
         </footer>
     </body>
