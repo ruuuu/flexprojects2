@@ -1,0 +1,233 @@
+html,
+body {
+    min-width: 1440px;/*ширина контента*/
+    min-height: 980px;/*высота макета*/
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3c425f;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+
+.container {
+    width: 1440px;/*штрина контента*/
+    margin: 0 auto;
+}
+
+.page {/*грид контенер*/
+    display: grid;
+    grid-template-areas:/*именуем облсти для грид жлементов*/
+        /*1ый столбец  2ой столбец */
+        "navigation header" /*1ый ряд*/
+        "navigation main"/*2ой ряд*/
+        "footer footer";/*3ий ряд*/
+    grid-template-columns: 280px 1fr;/*сетка сотсоит из двух столбцов*/
+    grid-template-rows:80px 1fr 60px;/*сетка сотсоит из 3 ех рядов*/
+
+    min-height: 100vh;
+}
+
+/*навигация*/
+
+.page-menu{/*грид элемент(навигация), котрый сам грид контенер*/
+    grid-area: navigation;/*название области*/
+
+    display: grid;
+    grid-template-areas: 80px 1fr auto;/*сетка из 3 ех рядов, auto значит размер контента, 1fr  знаичт чо займет все оставшееся пространство*/
+
+
+
+}
+
+.page-header{/*грид элемент, ктрый сам грид кнтенер*/
+    grid-area: header;/*название области*/
+
+    display: grid;
+    grid-template-columns: 1fr auto 80px;/*3ий столбец фиксированый по ишрине, второй-контент по ширине, 1 ый займет все осталвшееся проство*/ /*За счёт того, что первая колонка займёт всё свободное пространство, две последние колонки сетки будут «прибиты» к правому краю.*/
+}
+
+.page-main{/*грид элемент, отрый сам грид конетнер*/
+    grid-area: main;/*название области*/
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 3fr 1fr;
+
+    grid-template-rows: 300px auto 1fr;/*1ый ряд фиксирован, 2ой по контенту подсторится, 3ий займет все свободное пространство*/
+
+    grid-template-areas:/*именуем области*/
+        /*1ый столбец  2ой столбец */
+        "slider contacts" /*1ый ряд*/
+        "offers contacts"/*2ой ряд*/
+        "video contacts";/*3ий ряд*/
+    grid-gap: 20px;/*интервал между рядами и стоблцами*/
+
+}
+
+.page-footer{/*грид элемент, кторый сам грид контенер*/
+    grid-area: footer;/*название области*/
+    display: grid;
+
+    grid-template-columns: 280px 1fr 280px;/*1 и  3ий солбцы фикрсировнане, 2 му уйдет все свободное пространство*/
+}
+
+
+/*грид элементы шапки*/
+
+
+.search{/*грид элемент*/
+    padding-top: 10px;
+    padding-left: 30px;/*место для иконки поиска*/
+}
+
+.search-field {
+  padding: 20px 20px 20px 32px;
+}
+
+.profile{/*грид элемент*/
+    display: flex;
+   
+    align-items: center;
+    max-width: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    
+    
+}
+
+
+.profile__name{/*флекс элемент*/
+    color:#3C425F;
+    margin-right: 10px;
+}
+
+.item-with-picture::before{/*псевдожлемент(иконка кружочка) в флекс конетенре ведетсебя как флекс элемент*/
+    content: "";
+    width:40px;
+    height: 40px;
+    margin-right: 10px;
+    
+    background: #F1F3FE;
+    border-radius: 20px;
+}
+
+.profile__btn{
+    width: 12px;
+    height: 6px;
+  border: none;
+  background-color: #576BCC;
+}
+
+
+.notifications{/*грид элемент*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.notifications__btn{
+    display: flex;
+    
+    background-color: transparent;
+    border:none;
+    width: 108px;
+    height: 20px;
+    margin-right: 27px;
+}
+
+.notifications__btn::before{
+    content: "";
+    width: 18px;
+    height: 20px;
+    background-image: url("img/Union.svg");
+    
+}
+
+
+/*грид жлементы main*/
+
+.slider{/*грид элемент*/
+    grid-area: slider;
+    width: 820px;
+    height: 300px;
+}
+
+.offers{/*грид элемент*/
+    grid-area: offers;
+}
+
+.video{/*грид элемент*/
+    grid-area: video;
+}
+
+.contacts{/*грид элемент*/
+    grid-area: contacts;
+
+}
+
+
+/*подвал page-footer*/
+.copyright {/*грид элемент*/
+
+}
+
+.page-footer-logo {/*грид элемент*/
+
+}
+
+.copyright-details {/*грид элемент*/
+
+}
+
+
+.logo{
+    padding: 24px 30px 15px;
+}
+
+.page-menu__link, .page-menu-tools__link{ /*a*/
+    color:#3C425F;
+    display: block;
+    padding: 20px 25px 20px 63px;
+}
+
+.page-menu-tools{
+
+    margin: 0;
+    margin-bottom: 10px;
+}

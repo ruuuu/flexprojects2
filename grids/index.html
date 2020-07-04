@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+        <title>Let’s Speak, языковая школа</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="page container"><!--грид контенере -->
+        <nav class="page-menu"><!--грид элемент, котрый сам грид конетнер -->
+            <a class="logo" href="">
+                <img class="logo-img" width="161" height="36" src="https://assets.htmlacademy.ru/content/skills/6/case-01/img/logo.svg" alt="Let’s Speak, языковая школа">
+            </a>
+
+            <ul class="page-menu__list">
+                <li class="page-menu__item page-menu__item--active">
+                    <a class="page-menu__link page-menu__link--cab" href="">Кабинет ученика</a>
+                </li>
+
+                <li class="page-menu__item">
+                    <a class="page-menu__link page-menu__link--class" href="">Учебный класс</a>
+                </li>
+
+                <li class="page-menu__item">
+                    <a class="page-menu__link page-menu__link--book" href="">Методичка</a>
+                </li>
+
+                <li class="page-menu__item">
+                    <a class="page-menu__link page-menu__link--home" href="">Домашняя работа</a>
+                </li>
+
+                <li class="page-menu__item">
+                    <a class="page-menu__link page-menu__link--exam" href="">Экзамены</a>
+                </li>
+            </ul>
+
+            <ul class="page-menu-tools">
+                <li class="page-menu-tools__item">
+                    <a class="page-menu-tools__link" href="">Настройки</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header class="page-header"><!--шапка грид элемент, ктрый сам рид конетнер -->
+            <div class="search">
+                <form action="" method="get">
+                    <input class="search__field" type="text" name="search" id="search" placeholder="Поиск...">
+                </form>
+            </div>
+
+            <div class="profile item-with-picture" data-text="О"><!-- грид контененр-->
+                <a class="profile__name" href="#">Опознанный Енот</a>
+                <button class="profile__btn" type="button"></button>
+            </div>
+
+            <div class="notifications">
+                <button class="notifications__btn" type="button"><span>1</span></button>
+            </div>
+        </header>
+
+        <main class="page-main"><!--грид элемент, корый сам грид контенер -->
+            <div class="slider"><!--грид элемент-->
+                <img src="https://assets.htmlacademy.ru/content/skills/6/case-01/img/image-01.jpg" width="820" height="300" alt="Бигбен на фоне голубого облачного неба">
+                <p class="slider__headline">«Бифитер», «Кокни», «Даблдекер»...></p>
+                <p class="slider__text">Пройдите тест и узнайте насколько хорошо вы знакомы с жизнью в Лондоне</p>
+                <a class="slider__link" href="">Пройти тест</a>
+                <button class="slider__btn slider__btn--prev"><span class="visually-hidden">Назад</span></button>
+                <button class="slider__btn slider__btn--next"><span class="visually-hidden">Вперёд</span></button>
+            </div>
+
+            <section class="offers"><!--грид элемент-->
+                <ul class="offers__list">
+                    <li class="offers-item">
+                        <h3>Английский завтрак</h3>
+                        <div class="offers-item__content">
+                            <p class="offers-item__text">Разговорный клуб</p>
+                            <p class="offers-item__time">10:00 — 11:00 (ПН—ПТ)</p>
+                        </div>
+                        <div class="offers-item__link">
+                            <a href="">Запиcаться</a>
+                        </div>
+                    </li>
+
+                    <li class="offers-item">
+                        <h3>Лето в Лондоне</h3>
+                        <div class="offers-item__content">
+                            <p class="offers-item__text">Месяц экскурсий и практики</p>
+                            <p class="offers-item__time">10 июня — 3 июля</p>
+                        </div>
+                        <div class="offers-item__link">
+                            <a href="">Отправиться</a>
+                        </div>
+                    </li>
+
+                    <li class="offers-item">
+                        <h3>Надоел английский?</h3>
+                        <div class="offers-item__content">
+                            <p class="offers-item__text">С нами можно выучить и другие языки </p>
+
+                        </div>
+                        <div class="offers-item__link">
+                            <a href="">Открыть список</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="video">
+                <video class="video__lesson" poster="https://assets.htmlacademy.ru/content/skills/6/case-01/img/image-18.jpg" src="https://www.youtube.com/watch?v=7IJfRtVHN80&feature=youtu.be" width="540" height="300">
+                    <source src="https://www.youtube.com/watch?v=7IJfRtVHN80&feature=youtu.be" type="video/mp4">
+
+                </video>
+
+                <div class="video-play-list-wrapper">
+                    <h3>Курс English A1</h3>
+
+                    <ul class="play-list">
+                        <li class="play-list__item">
+                            <button class="play-list__button" ype="button"><span class="visually-hidden">Пуск/Стоп</span></button>
+                            <h4>Урок8</h4>
+                            <p>Времена глаголов</p>
+                        </li>
+
+                        <li class="play-list__item play-list__item--active">
+                            <button class="play-list__button" ype="button"><span class="visually-hidden">Пуск/Стоп</span></button>
+                            <h4>Урок9</h4>
+                            <p>Неправильные глаголы</p>
+                        </li>
+
+                        <li class="play-list__item">
+                            <button class="play-list__button" ype="button"><span class="visually-hidden">Пуск/Стоп</span></button>
+                            <h4>Урок10</h4>
+                            <p>Present Simple</p>
+                        </li>
+
+                        <li class="play-list__item">
+                            <button class="play-list__button" ype="button"><span class="visually-hidden">Пуск/Стоп</span></button>
+                            <h4>Урок11</h4>
+                            <p>Past Simple</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="contacts">
+                <h2>Контакты</h2>
+
+                <ul class="contacts-list">
+                    <li class="contacts-item">
+                        <a class="contacts-item__link item-with-picture" data-text="Н"  href="">
+                            <p class="contacts__name">Неопознанный Енот</p>
+                            <p class="contacts__lang">English A1</p>
+                        </a>
+                    </li>
+
+                    <li class="contacts-item">
+                        <a class="contacts-item__link item-with-picture" data-text="Н"  href="">
+                            <p class="contacts__name">Неопознанный Енот</p>
+                            <p class="contacts__lang">English A1</p>
+                        </a>
+                    </li>
+
+                    <li class="contacts-item">
+                        <a class="contacts-item__link item-with-picture" data-text="Н"  href="">
+                            <p class="contacts__name">Неопознанный Енот</p>
+                            <p class="contacts__lang">English A1</p>
+                        </a>
+                    </li>
+
+                    <li class="contacts-item">
+                        <a class="contacts-item__link item-with-picture" data-text="Н"  href="">
+                            <p class="contacts__name">Неопознанный Енот</p>
+                            <p class="contacts__lang">English A1</p>
+                        </a>
+                    </li>
+
+                    <li class="contacts-item">
+                        <a class="contacts-item__link item-with-picture" data-text="Н"  href="">
+                            <p class="contacts__name">Неопознанный Енот</p>
+                            <p class="contacts__lang">English A1</p>
+                        </a>
+                    </li>
+                    <li class="contacts-item">
+                        <a class="contacts-item__link item-with-picture" data-text="Н"  href="">
+                            <p class="contacts__name">Неопознанный Енот</p>
+                            <p class="contacts__lang">English A1</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="page-footer"><!--грид элемент, котрый сам грид контенер  -->
+            <p class="copyright">© 2020</p><!--грид элемент-->
+            <a class="page-footer-logo" href="#"><b>Let’s Speak</b>, языковая школа</a><!--грид элемент-->
+            <!--грид элемент-->
+            <p class="copyright-details">Сайт создан в <a href="htmlacademy.ru">HTML Academy</a></p>
+        </footer>
+
+    </body>
+</html>
