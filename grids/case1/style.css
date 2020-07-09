@@ -250,13 +250,13 @@ p {
     margin-right: 10px;
 }
 
-.item-with-picture::before{/*псевдожлемент(иконка кружочка) в флекс конетенре ведетсебя как флекс элемент*/
+.item-with-picture::before{/*псевдоэлемент(иконка кружочка) в флекс конетенре ведет себя как флекс элемент*/
     content: "";
     width:40px;
     height: 40px;
     margin-right: 10px;
 
-    background: #F1F3FE;
+    background-color: #F1F3FE;
     border-radius: 20px;
 }
 
@@ -406,19 +406,20 @@ p {
 
 .slider__btn{
     position: absolute;
-    width: 64px;
+    width: 64px;/*кружочки*/
     height: 64px;
 
     top: 0;
     left: -40px;
     bottom: 0;
-    margin: auto; /*центрует*/   
+    margin: auto; /*центрует*/
 
     border-radius: 50%;
     border: none;
     background-color: #ffffff;
 
     background-image: url("img/arrow-left.svg");
+    background-position: right 10px center;
     background-repeat: no-repeat;
     background-size: 18px 18px;
 }
@@ -433,8 +434,12 @@ p {
     right: -32px;
     top:0;
     bottom: 0;
-    margin: auto;/*это свой свойство не наследуется*/
+    margin: auto;/*это свойство не наследуется*/
 
+    background-image: url("img/arrow-right.svg");
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
 }
 
 .offers{/*грид элемент*/
@@ -446,7 +451,7 @@ p {
 .offers__list{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /*либо repeat(3, 1fr);*/
-    grid-gap: 20px; 
+    grid-gap: 20px;
 }
 
 .offers-item{
@@ -473,17 +478,47 @@ p {
     margin-bottom: 15px;
 }
 
+.offers-item__time{
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
 
 
-.offers-item__link{
+
+    color: #0BC4CF;
+}
+
+
+.offers-item__link{/*флекс элемент*/
     align-self: flex-end;
     /*margin-left: auto;*/
+    margin-top: auto;/*флекс элемент  прижмется  к низу контенера*/
 }
 
 .offers-item__link a{
-    color:#576BCC;
+    display: flex;/*для псевдожлемента стрелочка впарво*/
+    justify-content: space-between;
+    max-width: 144px;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #576BCC;
+}
+
+.offers-item__link a::after{/*псевдожлемент срелочка вправо*/
+    content: "";
+
+
+    width: 20px;
+    height: 3px;
+
 
 }
+
 
 .video{/*грид элемент, котрый сам грид контенер*/
     grid-area: video;
@@ -532,7 +567,7 @@ p {
     margin-left: 30px;
     margin-bottom: 20px;
     padding-bottom: 5px;
-    
+
     border-bottom: 3px solid #E4E8FC;
 }
 
@@ -637,7 +672,7 @@ p {
 }
 
 .contacts-item{
-    padding: 16px 10px 0 20px; 
+    padding: 16px 10px 0 20px;
 }
 
 .contacts-item__link{
@@ -646,7 +681,10 @@ p {
     grid-template-rows: auto auto;
 
     grid-column-gap: 12px;/*расстояние между столбцами*/
+    position: relative; /*для псевдожлемент маленький кружочек(темносиний)*/
 }
+
+
 
 .contacts__name{
     color: #3C425F;
@@ -668,8 +706,23 @@ p {
 }
 
 
-.contacts-item__link::before {
+.contacts-item__link::before {/* псевдоэлементв грид контенейре вдет себя как грид элемент*/
     grid-row: 1 / 3;/*начинется с  1ой линии ряда и закзанчивается на 3 е линии*/
+
+
+
+}
+
+.contacts-item__link::after {/*кружочек маленький*/
+    content: "";
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background: #0BC4CF;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
 }
 
 
@@ -708,4 +761,3 @@ p {
     margin: 0;
     margin-bottom: 10px;
 }
-

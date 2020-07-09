@@ -1,0 +1,612 @@
+html,
+body {
+    min-width: 1440px;/*ширина контента*/
+    min-height: 980px;/*высота макета*/
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3c425f;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+
+.container {
+    width: 1440px;/*штрина контента*/
+    margin: 0 auto;
+}
+
+.page{
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+
+    grid-template-areas: /*2 столбца, 3 ряда*/
+        /*1-ый столбец 2-ой столбец */
+        "navigation header"
+        "navigation main"
+        "footer footer";
+}
+
+
+.page-menu{/*грид элемент, котрый сам грид контейнер*/
+    grid-area: navigation;
+
+    display: grid;   
+    grid-template-rows: 80px 1fr auto; /*1fr - под свобод осатвшееся место, auto - под контент */
+
+    background-color: #ffffff;
+    border-right: 1px solid #B4BEF0;
+}
+
+.page-menu__item a,
+.page-menu-tools__item a{
+    color: #000000;
+}
+
+.logo{
+    padding: 24px 30px;
+}
+
+.page-menu__link,
+.page-menu-tools__link{
+    position: relative; /*для иконки слева*/
+
+    display: inline-block;
+
+
+    padding-left: 65px;/*место для иконки оставляем*/
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3C425F;
+}
+
+
+.page-menu__link::before{/*иконка слева*/
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+
+    top: 20px;
+    left: 30px;
+
+
+}
+
+
+.page-menu__link--cab::before{
+
+    background-image: url("img/Union1.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+
+.page-menu__link--class::before{
+
+    background-image: url("img/Union2.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+.page-menu__link--book::before{
+    background-image: url("img/Union3.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+
+.page-menu__link--home::before{
+    background-image: url("img/Union4.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+.page-menu__link--exam::before{
+    background-image: url("img/Union5.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+
+
+.page-menu-tools__link::before{
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+
+    top: 20px;
+    left: 30px;
+
+    background-image: url("img/Union6.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+.page-menu__item--active {
+    background-color: #F1F3FE;
+}
+
+
+.page-header{/*грид элемент, котрый сам грид контейнер*/
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr auto 80px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #B4BEF0;
+}
+
+.search{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+}
+
+.search__field{
+    border: none;
+
+
+    padding: 20px;
+    padding-left: 32px;
+    background-image: url("img/search.svg");
+    background-size: 21px 21px;
+    background-repeat: no-repeat;
+    background-position: center left;
+
+}
+
+
+
+.search__field::placeholder{
+    color: aqua;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B4BEF0;
+}
+
+
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+
+}
+
+
+.profile::before{ /*псевдоэелмент являес флекс элементом */
+    content: "";
+    width: 40px;
+    height: 40px;
+
+    border-radius: 20px;
+    margin-right: 18px;
+    background-color: #F1F3FE;;
+
+}
+
+
+.profile__name{
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+
+    color: #3C425F;
+    margin-right: 20px;
+}
+
+
+.profile__btn{
+
+    width: 12px;
+    height: 6px;
+    background-color: #576BCC;
+    margin-bottom: 30px;
+}
+
+
+.notifications{
+    display: flex;/*чтобы псевдожелмент-полоску разместить*/
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+
+.notifications::before{
+    content: "";
+
+
+    width: 1px;
+    height: 40px;
+    left: 0;
+    top: 0;
+
+    border-left: 2px solid #E4E8FC;
+    margin-right: 20px;
+}
+
+
+
+.notifications__btn{
+    width: 20px;
+    height: 20px;
+
+    background-image: url("img/Union.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+
+
+
+}
+
+
+.notifications__btn span{
+
+    display: inline-block;
+
+    position: relative;
+
+    width: 15px;
+    height: 15px;
+
+    top: -10px;
+    right: -5px;
+
+    background-color: #FF8F0B;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    color: #ffffff;
+
+}
+
+
+
+
+.page-main{/*грид элемент, котырй сам грид контенейр*/
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 300px auto 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "slider contacts" 
+        "offers contacts"
+        "video contacts";
+
+    background-color: #F1F3FE;
+    padding: 30px;
+
+}
+
+
+
+.page-footer{
+    grid-area: footer;
+}
+
+
+.slider{/*грид элемент*/
+    grid-area: slider;
+    width: 820px;
+    height: 300px;
+    position: relative;
+    padding: 32px 60px;
+    box-sizing: border-box;
+    color:#ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.slider__img{
+
+    position: absolute;
+    top:0;
+    left: 0;
+
+}
+
+.slider__headline{
+    position: relative;
+
+}
+
+.slider__text{
+    position: relative;
+}
+
+
+.slider__link{
+    position: relative;
+}
+
+.offers{/*грид элемент, котрый сам грид контейнер*/
+    grid-area: offers; 
+
+}
+
+
+.offers__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.offers-item{/*грид элемент*/
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(60, 66, 95, 0.2);
+    border-radius: 4px;
+}
+
+.offers-item__name{
+    margin-bottom: 20px;
+}
+
+
+.offers-item__link{/*флекс элемент*/
+    align-self: flex-end;/*авыравниваие флекс элемнет вдоль поперченой оси*/
+    margin-top: auto;/*прижмется к низу контейнера*/
+}
+
+
+.offers-item__content{
+    margin-bottom: 20px;
+}
+
+
+.offers-item__link a{
+    color: #576BCC;
+}
+
+.video{/*грид элемент: ктрый сам грид контенер*/
+    grid-area: video;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+
+.video__lesson{/*грид элемент*/
+    width: 540px;
+    height: 300px;
+}
+
+.video-play-list-wrapper{/*грид элемент*/
+    width: 260px;
+    
+    box-sizing: border-box;/*чтобы отсупы входили в width*/
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(60, 66, 95, 0.2);
+    border-radius: 4px;
+    height: 300px;
+    overflow: hidden; /*чтобы текст не вылезал из блока*/
+}
+
+.course-name{
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #E4E8FC;
+}
+
+
+
+.play-list{
+    height: 235px;
+    overflow-y: auto;/*чобы появился верикальный скролл*/
+}
+
+.play-list__item{/*грид контенр*/
+    padding: 30px;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 32px auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 12px;
+}
+
+
+
+
+.play-list__button{/*грид элемент*/
+    grid-row: 1/3;
+    grid-column: 1/2;
+
+    position: relative;/*чтобы реугольничек располоить*/
+    width: 32px;
+    height: 32px;
+    background-color: #F1F3FE;
+    border-radius: 4px;
+    border: none;
+}
+
+
+.play-list__button::before{/*псевдоэелмент синий трегуольничек*/
+    content: "";
+    position: absolute;
+
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    transform: translate(12px, 10px);
+    border-top: 6px solid transparent;
+    border-left: 12px solid #576bcc;
+    border-bottom: 6px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+
+.lesson{/*грид элемент*/
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-style: normal;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+
+
+
+    color: #3C425F;
+}
+
+
+.lesson-name{/*грид элемент*/
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+
+
+.contacts{/*грид элемент*/
+    grid-area: contacts;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(60, 66, 95, 0.2);
+    border-radius: 4px;
+
+}
+
+
+.contacts__title{
+    padding: 20px;
+}
+
+.contacts-item{
+    padding: 20px;
+}
+
+
+.contacts-item__link{/*грид контейнер*/
+    display: grid;
+
+    grid-template-columns: 40px auto;
+    grid-template-areas: auto auto;
+    grid-column-gap: 12px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3C425F;
+    position: relative;/*для псевдожлемент маленький кружочек(темносиний)*/
+}
+
+
+.contacts-item__link::before{/*песвдоэлемент голубй круг, в грид контенйере является  грид элементом*/
+    content: "";
+    width: 40px;
+    height: 40px;
+
+
+    background-color: #F1F3FE;
+    border-radius: 20px;
+
+    grid-row: 1/3;
+    grid-column: 1/2;
+
+
+}
+
+
+.contacts-item__link::after{/* псевдоэлемент для маленького синего кружочка*/
+    content: "";
+    position: absolute;
+    
+    top:0;
+    left: 0;
+
+    width: 10px;
+    height: 10px;
+
+    background-color:  #0BC4CF;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+}
+
+
+.contacts__name{/*грид элемент*/
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+
+
+.contacts__lang{/*грид элемент*/
+    grid-row: 2/3;
+    grid-column: 2/3;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3C425F;
+    opacity: 0.5;
+}
+
