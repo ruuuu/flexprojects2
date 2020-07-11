@@ -1,6 +1,6 @@
 html,
 body {
-    min-width: 1440px;/*ширина контента*/
+    min-width: 1440px;/*ширина контента, оеа указывается для фикрсированной сетки*/
     min-height: 980px;/*высота макета*/
 }
 
@@ -225,7 +225,7 @@ p {
     padding-top: 10px;
     padding-bottom: 10px;
     margin-right: 10px;
-
+    max-width: 400px;
 }
 
 
@@ -255,12 +255,31 @@ p {
 
 
 .profile__btn{
-
+    
+    position:relative;/*позиционировать будет  трегуольничек укнопки */
     width: 12px;
     height: 6px;
-    background-color: #576BCC;
+    background-color: transparent;
     margin-bottom: 30px;
+    border: none;
 }
+
+
+.profile__btn::before{/*псевдоэлемент трегульничек синий*/
+    content: "";
+    position: absolute;
+    
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 6px solid #576bcc;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
 
 
 .notifications{
@@ -343,8 +362,28 @@ p {
 
 
 
-.page-footer{
+.page-footer{/*грид элемент, котрый сам грид котейнер*/
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    background-color: #3C425F;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+    text-align: right;
+
+    color: #FFFFFF;
+
+    
+
 }
 
 
@@ -440,7 +479,7 @@ p {
 
 .video-play-list-wrapper{/*грид элемент*/
     width: 260px;
-    
+
     box-sizing: border-box;/*чтобы отсупы входили в width*/
 
     background: #FFFFFF;
@@ -452,7 +491,9 @@ p {
 
 .course-name{
     margin-bottom: 20px;
-    padding-bottom: 5px;
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 9px;
     border-bottom: 1px solid #E4E8FC;
 }
 
@@ -464,8 +505,8 @@ p {
 }
 
 .play-list__item{/*грид контенр*/
-    padding: 30px;
-    padding-left: 0;
+    padding: 10px;
+    padding-left: 20px;
     display: grid;
     grid-template-columns: 32px auto;
     grid-template-rows: auto auto;
@@ -537,6 +578,9 @@ p {
 
 .contacts__title{
     padding: 20px;
+    padding-left: 0;
+    margin-left: 20px;
+    border-bottom: 1px solid #F1F3FE;
 }
 
 .contacts-item{
@@ -579,7 +623,7 @@ p {
 .contacts-item__link::after{/* псевдоэлемент для маленького синего кружочка*/
     content: "";
     position: absolute;
-    
+
     top:0;
     left: 0;
 
@@ -610,3 +654,15 @@ p {
     opacity: 0.5;
 }
 
+
+.copyright{
+    text-align: left;
+}
+
+.page-footer-logo{
+    text-align: center;
+}
+
+.copyright-details{
+    text-align: right;
+}
