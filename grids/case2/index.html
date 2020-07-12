@@ -4,208 +4,275 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Загородные дома в аренду</title>
-        
+
     </head>
 
-    <body class="page">
-        <header class="page-header">
-            <nav class="page-nav">
-                <ul class="site-nav">
-                    <li>
+    <body class="page"><!--грид контенйер -->
+        <header class="page-header"><!--грид элемент -->
+
+            <nav class="page-nav container"><!--грид контеер -->
+                <ul class="site-nav"><!--грид элемент -->
+                    <li class="site-nav__item">
                         <a href="">Место</a>
                     </li>
-                    <li>
+                    <li class="site-nav__item">
                         <a href="">Каталог</a>
                     </li>
-                    <li>
+                    <li class="site-nav__item">
                         <a href="">Оставить заявку</a>
                     </li>
                 </ul>
 
-                <a class="logo" href="">
-                    <img class="logo-img" width="97" height="30" src="img/logo.svg" alt="Let’s Speak, языковая школа">
-                </a>
+                <div class="logo-container"><!--грид элемент -->
+                    <a class="logo" href="">
+                        <img class="logo-img" width="97" height="30" src="img/logo.svg" alt="logo">
+                    </a>
+                </div> 
 
-                <a class="search" href="">
-                    <span class="visually-hidden">Поиск</span>
-                </a>
+                <div class="search-container"><!--грид элемент -->
+                    <a class="search" href="">
+                        <img class="" width="16" height="16" src="img/search.svg" alt="search">
+                    </a>
+                </div>
 
-                <a class="page-link" href=""><span class="visually-hidden">Вход</span></a>
-                или
-                <a class="page-link" href=""><span class="visually-hidden">Регистрация</span></a>
+                <div class="user-nav">
+                    <a class="page-link" href=""> <!--грид элемент -->      <span class="">Вход</span>
+                    </a>
+                    или  
+                    <a class="page-link" href="">
+                        <span class="">Регистрация</span>
+                    </a>
+                </div>
+
             </nav>
         </header>
 
-        <main class="page-content">
-            <div class="welcom">
+        <main class="page-content"><!--грид элемент -->
+            <div class="welcom"><!-- промо-->
+                <div class="welcom-content container"> <!-- флекс контенер-->
+                    <div class="welcom__text-column"><!--флекс элемент -->
 
-                <h2>Загородные дома в аренду</h2>
-                <p class="welcom__city">Санкт-Петербург</p>
-                <p class="welcom__text">Отдохните от суеты мегаполиса в уютном тёплом доме в окружении экологически чистых лесов, рек и озёр</p>   
+                        <p class="welcom__city">Санкт-Петербург</p>
+                        <h2>Загородные дома в аренду</h2>
+                        <p class="welcom__text">Отдохните от суеты мегаполиса в уютном тёплом доме в окружении экологически чистых лесов, рек и озёр</p>   
 
-                <a class="button" href="">Арендовать дом</a>
+                        <div class="welcom__button"><!-- кнопку обернули чтоб она не растягивалась на всю ширину грид ячйки-->
+                            <a class="button" href="">Арендовать дом</a>
+                        </div>
 
-                <ul class="social-list">
-                    <li class="social-list__item">
-                        <a class="social-list__link social-list__link--facebook" href="">
-                            <span class="visually-hidden">Facebook</span>
-                        </a>
-                    </li>
+                        <ul class="social-list">
+                            <li class="social-list__item">
+                                <a class="social-list__link social-list__link--facebook" href="">
+                                    <span class="visually-hidden">Facebook</span>
+                                </a>
+                            </li>
 
-                    <li class="social-list__item">
-                        <a class="social-list__link social-list__link--instagram" href="">
-                            <span class="visually-hidden">Instagram</span>
-                        </a>
-                    </li>
+                            <li class="social-list__item">
+                                <a class="social-list__link social-list__link--instagram" href="">
+                                    <span class="visually-hidden">Instagram</span>
+                                </a>
+                            </li>
 
-                    <li class="social-list__item">
-                        <a class="social-list__link social-list__link--vk" href="">
-                            <span class="visually-hidden">Vk</span>
-                        </a>
-                    </li>
-                </ul>
+                            <li class="social-list__item">
+                                <a class="social-list__link social-list__link--vk" href="">
+                                    <span class="visually-hidden">Vk</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="welcom-img-container">
-                    <img src="img/promo.svg" width="795" height="496" alt="promo">
+                    <div class="welcom-img-container"><!-- флекс элемент-->
+                        <img src="img/promo.svg" width="795" height="496" alt="promo">
+
+                        <div class="slider-controls">
+                            <button class="slider__btn slider__btn--prev"><span class="visually-hidden">Назад</span></button>
+                            <button class="slider__btn slider__btn--next"><span class="visually-hidden">Вперёд</span></button>
+                            <p class="slider-page"></p>  
+                        </div>
+                    </div>
+
+
+
                 </div>
-
-                <button class="slider__btn slider__btn--prev"><span class="visually-hidden">Назад</span></button>
-                <button class="slider__btn slider__btn--next"><span class="visually-hidden">Вперёд</span></button>
             </div>
 
-            <section class="section place"><!--статья: у него arcticle -->
+            <section class="section place container"><!--статья:у него arcticle грид контенейр-->
                 <header>
                     <h2>Место</h2>
-                    <h3>Парк отдыха на берегу Ладожского озера</h3>
+                    <h3 class="section-title">Парк отдыха на берегу Ладожского озера</h3>
                 </header>
 
+                <div class="place-content"><!--грид контейнер -->
+                    <p>Отдохните в уютных деревянных домах с камином, сауной и джакузи, расположенных на берегу озера. Для
+                        любителей полного уединения есть домики и в глубине парка, в окружении вековых деревьев.
+                    </p>
+                    <img src="./img/image%2039.png" width="444" height="280" alt="Домик">
+                    <p class="article-aside-right">За счёт особой конструкции в наших домах очень тепло зимой и прохладно летом. Мы открыты для вас в любое время года!
+                    </p>
+                    <p>На территории парка есть баскетбольная площадка, собственный пляж с сеткой для волейбола, прокат горных велосипедов и лодок. А зимой у нас можно взять в прокат лыжи или снегоходы и кататься по специально оборудованным трассам. Для каждого посетителя составляем индивидуальную программу развлечений и помогаем её осуществить.
+                    </p>
+                    <img class="big-picture" src="./img/Rectangle%20118.png" width="1146" height="280" alt="big-image">
+                    <p>Около каждого коттеджа есть детская площадка с качелями и горками, а на территории парка работает детская комната. Вы сможете позволить себе любой отдых зная, что ваш ребёнок находится под присмотром опытных специалистов.
+                    </p>
+                    <blockquote>
+                        Мы предлагаем не только уютные дома, большой выбор развлечений и активностей для вас и вашей семьи, но и масштабные праздники, спортивные турниры и возможность встретить новых друзей.
+                    </blockquote>
+                    <p>
+                        Несмотря на отдалённость от населённых пунктов, вы не будете чувствовать себя оторванными от цивилизации. Все наши дома оборудованы высокоскоростными точками доступа Wi-Fi и домашними кинотеатрами с подпиской Netflix.
+                    </p>
+                    <p class="article-aside-left">Вы можете подписаться на рассылку и узнавать обо всех акциях, скидках, и выгодных предложениях.</p>
+                    <p>
+                        Приезжайте к нам на месяц, всё лето или зиму — на длительную аренду действуют хорошие скидки! Забронируйте дом прямо сейчас, для этого достаточно заказать звонок, а отменить бронь вы сможете в любое время совершенно бесплатно.
+                    </p>
+                    <div class="place-button-container"><!-- кнопку обернули чтоб она не растягивалась на всю ширину грид ячйки-->
+                        <a class="button" href="">Бесплатно забронировать</a>
+                    </div>
 
-                <p>Отдохните в уютных деревянных домах с камином, сауной и джакузи, расположенных на берегу озера. Для
-                    любителей полного уединения есть домики и в глубине парка, в окружении вековых деревьев.</p>
-                <img src="./img/image%2039.png" width="444" height="280" alt="Домик">
-                <p class="article-aside-right">За счёт особой конструкции в наших домах очень тепло зимой и прохладно летом. Мы открыты для вас в любое время года!</p>
-                <p>На территории парка есть баскетбольная площадка, собственный пляж с сеткой для волейбола, прокат горных велосипедов и лодок. А зимой у нас можно взять в прокат лыжи или снегоходы и кататься по специально оборудованным трассам. Для каждого посетителя составляем индивидуальную программу развлечений и помогаем её осуществить.</p>
-                <img src="./img/Rectangle%20118.png" width="1146" height="280" alt="big-image">
-                <p>Около каждого коттеджа есть детская площадка с качелями и горками, а на территории парка работает детская комната. Вы сможете позволить себе любой отдых зная, что ваш ребёнок находится под присмотром опытных специалистов.</p>
-                <blockquote>
-                    Мы предлагаем не только уютные дома, большой выбор развлечений и активностей для вас и вашей семьи, но и масштабные праздники, спортивные турниры и возможность встретить новых друзей.
-                </blockquote>
-                <p>
-                    Несмотря на отдалённость от населённых пунктов, вы не будете чувствовать себя оторванными от цивилизации. Все наши дома оборудованы высокоскоростными точками доступа Wi-Fi и домашними кинотеатрами с подпиской Netflix.
-                </p>
-                <p class="article-aside-left">Вы можете подписаться на рассылку и узнавать обо всех акциях, скидках, и выгодных предложениях.</p>
-                <p>
-                    Приезжайте к нам на месяц, всё лето или зиму — на длительную аренду действуют хорошие скидки! Забронируйте дом прямо сейчас, для этого достаточно заказать звонок, а отменить бронь вы сможете в любое время совершенно бесплатно.
-                </p>
-                <a class="button" href="">Бесплатно забронировать</a>
-
+                </div> 
             </section>
 
             <section class="section catalog"><!-- карточки -->
-                <header>
-                    <h2>Каталог</h2>
-                    <h3>Дома для аренды</h3>
-                </header>
+                <div class="container">
+                    <header class="catalog__title">
+                        <h2>Каталог</h2>
+                        <h3 class="section-title">Дома для аренды</h3>
+                    </header>
 
-                <div class="card-item">
-                    <img src="./img/card1.png" width="327" height="220" alt="Совеменная классика">
-                    <h3>Современная класика</h3>
-                    <p>Площадь-186 м2</p>
-                    <ul>
-                        <li>комнат 5</li>
-                        <li>3 спальни</li>
-                        <li>2 этажа</li>
-                    </ul>
-                </div>
+                    <ul class="catalog-list"><!-- грид кнтейнер-->
+                        <li class="catalog__card-item"><!--грид элемент, котрый сам грид контейнер из 1 столбца и 2ух строк-->
+                            <img class="card-pic" src="./img/card1.png" width="327" height="220" alt="Совеменная классика">
+                            <div class="card-content">
+                                <h3>Современная класика</h3>
+                                <p>Площадь-186 м2</p>
+                                <ul class="card-list-information">
+                                    <li class="card-list-information__item"><span>5</span> комнат</li>
+                                    <li class="card-list-information__item"><span>3</span>спальни</li>
+                                    <li class="card-list-information__item"><span>2</span> этажа</li>
+                                </ul>
+                            </div>
+                        </li>
 
-                <div class="card-item">
-                    <img src="./img/card2.png" width="327" height="220" alt="Совеменная классика">
-                    <h3>Дома на берегу озера</h3>
-                    <p>Площадь-186 м2</p>
-                    <ul>
-                        <li>комнат 5</li>
-                        <li>3 спальни</li>
-                        <li>2 этажа</li>
-                    </ul>
-                </div>
+                        <li class="catalog__card-item"><!-- грид элемент, котр сам грид контенйер-->
+                            <img class="card-pic" src="./img/card2.png" width="327" height="220" alt="Совеменная классика">
+                            <div class="card-content">
+                                <h3>Дома на берегу озера</h3>
+                                <p>Площадь-186 м2</p>
+                                <ul class="card-list-information">
+                                    <li class="card-list-information__item"><span>5</span> комнат</li>
+                                    <li class="card-list-information__item"><span>3</span> спальни</li>
+                                    <li class="card-list-information__item"><span>2</span> этажа</li>
+                                </ul>
+                            </div>
+                        </li>
 
-                <div class="card-item">
-                    <img src="./img/card3.png" width="327" height="220" alt="Совеменная классика">
-                    <h3>Особняк в лесу</h3>
-                    <p>Площадь-186 м2</p>
-                    <ul>
-                        <li>комнат 5</li>
-                        <li>3 спальни</li>
-                        <li>2 этажа</li>
-                    </ul>
-                </div>
+                        <li class="catalog__card-item"><!-- грид элемент котр сам грид контенйер-->
+                            <img class="card-pic" src="./img/card3.png" width="327" height="220" alt="Совеменная классика">
+                            <div class="card-content">
+                                <h3>Особняк в лесу</h3>
+                                <p>Площадь-186 м2</p>
+                                <ul class="card-list-information">
+                                    <li class="card-list-information__item"><span>5</span> комнат</li>
+                                    <li class="card-list-information__item"><span>3</span> спальни</li>
+                                    <li class="card-list-information__item"><span>2</span> этажа</li>
+                                </ul>
+                            </div>
+                        </li>
 
-                <div class="card-item">
-                    <img src="./img/card4.png" width="327" height="220" alt="Совеменная классика">
-                    <h3>Домик на дереве</h3>
-                    <p>Площадь-186 м2</p>
-                    <ul>
-                        <li>комнат 5</li>
-                        <li>3 спальни</li>
-                        <li>2 этажа</li>
-                    </ul>
-                </div>
+                        <li class="catalog__card-item"><!-- грид элемент котр сам грид контенйер-->
+                            <img class="card-pic" src="./img/card4.png" width="327" height="220" alt="Совеменная классика">
+                            <div class="card-content">
+                                <h3>Домик на дереве</h3>
+                                <p>Площадь-186 м2</p>
+                                <ul class="card-list-information">
+                                    <li class="card-list-information__item"><span>5</span> комнат</li>
+                                    <li class="card-list-information__item"><span>3</span> спальни</li>
+                                    <li class="card-list-information__item"><span>2</span> этажа</li>
+                                </ul>
+                            </div>
+                        </li>
 
-                <div class="card-item card-horizontal">
-                    <img src="./img/card5.png" width="327" height="178" alt="Совеменная классика">
-                    <h3>Лесной дом у  пруда</h3>
-                    <p>Площадь-186 м2</p>
-                    <ul>
-                        <li>комнат 5</li>
-                        <li>3 спальни</li>
-                        <li>2 этажа</li>
+                        <li class="catalog__card-item card-horizontal"><!-- грид элемент котр сам грид контенйер-->
+                            <img class="card-pic" src="./img/card5.png" width="327" height="178" alt="Совеменная классика">
+                            <div class="card-content">
+                                <h3>Лесной дом у  пруда</h3>
+                                <p>Площадь-186 м2</p>
+                                <ul class="card-list-information">
+                                    <li class="card-list-information__item"><span>5</span> комнат</li>
+                                    <li class="card-list-information__item"><span>2</span>спальни</li>
+                                    <li class="card-list-information__item"><span>2</span>этажа</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </section>
 
-            <section class="section feedback">
-                <header>
+            <section class="section feedback container"><!--грид контейнер-->
+                <header><!--грид элемент-->
                     <h2>Оставить заявку</h2>
-                    <h3>Мы свяжемся с вами</h3>
+                    <h3 class="section-title">Мы свяжемся с вами</h3>
                 </header>
 
-                <form class="feedback-form" method="get" action="">
-                    <label for="titles">Обращение</label>
-                    <select class="field" name="titles" id="titles">
-                        <option value="Mrs">Мистер</option>
-                        <option value="Mr">Миссис</option>
-                        <option value="Ms">Мисс</option>
-                    </select>
+                <form class="feedback-form" method="get" action=""><!--грид элемент-->
 
-                    <label for="first-name">Имя</label>
-                    <input class="field" type="text" name="first-name" id="first-name">
+                    <div class="feedback-form__first-row">
+                        <div class="input-wrapper titles">
+                            <label for="titles">Обращение</label>
+                            <select class="field" name="titles" id="titles">
+                                <option value="Mrs">Мистер</option>
+                                <option value="Mr">Миссис</option>
+                                <option value="Ms">Мисс</option>
+                            </select>
+                        </div>
 
-                    <label for="last-name">Фамилия</label>
-                    <input class="field" type="text" name="last-name" id="last-name">
 
-                    <label for="email">Email</label>
-                    <input class="field" type="email" name="email" id="email">
+                        <div class="input-wrapper name">
+                            <label for="first-name">Имя</label>
+                            <input class="field" type="text" name="first-name" id="first-name" placeholder="Джон">
+                        </div>
 
-                    <label for="tel">Телефон</label>
-                    <input class="field" type="tel" name="tel" id="tel">
+                        <div class="input-wrapper surname">
+                            <label for="last-name">Фамилия</label>
+                            <input class="field" type="text" name="last-name" id="last-name" placeholder="Смит">
+                        </div>
+                    </div>
 
-                    <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
-                    <label class="text-label" for="agreement">Согласие на обработку персональных данных</label>
+                    <div class="input-wrapper email">
+                        <label for="email">Email</label>
+                        <input class="field" type="email" name="email" id="email" placeholder="johnsmith@gmail.com">
+                    </div>
 
-                    <input class="visually-hidden" type="checkbox" name="subscribe" id="subscribe" checked>
-                    <label class="text-label" for="subscribe">Подписка на рассылк</label>
+                    <div class="input-wrapper phone">
+                        <label for="tel">Телефон</label>
+                        <input class="field" type="tel" name="tel" id="tel" placeholder="+7 999 999-99-99">
+                    </div>
 
-                    <button class="button" type="submit"> Отправить</button>
+                    <div class="checkbox-container">
+                        <div class="policy checkbox">
+                            <input class="visually-hidden checkbox-field" type="checkbox" name="agreement" id="agreement">
+                            <label class="text-label" for="agreement">Согласие на обработку персональных данных</label>
+                        </div>
+
+                        <div class="subscribe checkbox">
+                            <input class="visually-hidden checkbox-field" type="checkbox" name="subscribe" id="subscribe" checked>
+                            <label class="text-label" for="subscribe">Подписка на рассылку</label>
+                        </div>
+                    </div>
+
+                    <div class="submit">
+                        <button class="button" type="submit"> Отправить</button>
+                    </div>
+
                 </form>
 
-                <img src="./img/footer-img.png" width="678" height="737" alt="lodka na ozere">
+                <img class="feedback-img" src="./img/footer-img.png" width="678" height="737" alt="lodka na ozere"> <!--грид элемент-->
             </section>
 
         </main>
 
-        <footer class="page-footer">
+        <footer class="page-footer"><!--грид элемент -->
             <a class="footer-logo" href="">
                 <img class="logo-img" width="97" height="30" src="img/footer-logo.svg" alt="logo-footer">
             </a>
@@ -223,7 +290,7 @@
                     <a class="page-footer-nav__link page-link" href="#">Оставить заявку</a>
                 </li>
             </ul>
-            
+
             <p class="copyright">© Сделано в
                 <a class="page-link" href="htmlacademy.ru">HTML Academy</a>
             </p>

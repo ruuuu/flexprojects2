@@ -1,0 +1,594 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-width: 1440px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+}
+
+
+html,
+body {
+    min-width: 1440px;/*ширина  мактеа*/
+    min-height: 4777px;
+}
+
+a {
+    text-decoration: none;
+    color: #06A9B3;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+
+.container {
+    width: 1380px;/*ширина контента*/
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+
+.button{
+    display: inline-block;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+    padding: 15px 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+
+    color: #FFFFFF;
+    background-color:  #06A9B3;
+    border: none;
+}
+
+.button:hover{
+    background-color: #EAF2F6;
+    color: aquamarine;
+    border: none;
+    outline: none;
+}
+
+
+.button:active{
+    background-color:  #06A9B3;
+
+}
+
+.section-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 48px;
+    /* or 150% */
+
+
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+
+.page{/*грид контенер*/
+    display: grid;
+
+    grid-template-rows: auto 1fr auto;
+    grid-column-gap: 65px;
+    grid-template-areas: 
+        /*1ин  столбец*/
+        "header"
+        "content"
+        "footer";
+    min-height: 100vh;/*чтоыб сетка занимала всю доступную ширину окна браузера, т.е. прижмём подвал сайта к низу страницы.*/
+
+}
+
+
+.page-header{/*грид элемент*/
+    grid-area: header;
+}
+
+.page-nav{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;/*Так  прижмём ссылки на форму поиска, входа и регистрации к правому краю контейнера-центровщика*/
+}
+
+.site-nav{
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.site-nav__item{
+    margin-right: 65px;
+}
+
+.site-nav__item:last-child{
+    margin-right: 0;
+}
+
+.logo-container{
+    padding: 20px 110px 20px 0;
+    text-align: center;
+}
+
+.search-container{
+    padding: 25px 0 23px;
+    margin-right: 30px;
+}
+
+
+
+
+.user-nav{
+    display: flex;
+
+    align-items: center;
+}
+
+.page-link{
+    margin-right: 20px;
+}
+
+.page-link:last-child{
+    margin-right: 0;
+}
+
+.page-content{/*грид элемент*/
+    grid-area: content;
+}
+
+.welcom{
+    padding-bottom: 100px;
+    background-color: #F2F8FB;
+}
+
+
+/*.welcom-content{/*грид контенер
+display: grid;
+grid-template-columns: repeat(12, 1fr);/*12 столбцов , каждый по 1fr
+
+grid-template-rows: repeat(5, auto);
+grid-column-gap: 24px;
+}
+*/
+
+.welcom-content{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.welcom__text-column{
+    width: 678px;
+    padding-left: 120px;
+    padding-top: 108px;
+
+}
+
+.welcom__city{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+
+    color: #333333;
+
+    opacity: 0.3;
+    margin-bottom: 20px;
+}
+
+.welcom__text-column h2{
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 62px;
+    /* identical to box height, or 141% */
+
+
+    color: #333333;
+
+}
+
+
+.welcom-img-container{
+
+}
+
+
+.social-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.place{/*грид конетнер*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);/*12 столбуов*/
+    grid-column-gap: 24px;
+    margin-top:100px;
+    margin-bottom: 100px;
+}
+
+.place header{/*грид-элемент*/
+    grid-column: 5/9;
+}
+
+.place-content{/*грид элемент, коырй сам грид контейнер*/
+    grid-column: 1/-1;/*то есть все колонки*/
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 24px;
+}
+
+.place-content > * {/*для всех грид элементов place-content */
+    grid-column: 5 / 9;/*для конкретнй грид элементов будем препрелелять коориланты*/
+}
+
+.place-content img {
+    margin: 0 0 25px 0;
+}
+
+.article-aside-right{
+    grid-column: -4/-2;
+}
+
+.big-picture{
+    grid-column: 2 / -2;
+}
+
+.place-content blockquote{
+    grid-column: 4/10; 
+    margin: 0 0 35px 0;
+}
+
+.article-aside-left{
+    grid-column: 2/4;
+}
+
+.place-button-container{
+    grid-column: 6/9;
+}
+
+.catalog{
+    background-color: #F2F8FB;
+    padding-top: 100px;
+    padding-bottom: 140px;
+}
+
+.catalog__title{
+    text-align: center;
+}
+
+
+.catalog__title h3{
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height, or 150% */
+
+    text-align: center;
+
+    color: #333333;
+}
+
+.catalog-list{/*грид контейнер*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 24px;/*расстяние между столбцами и рядами*/
+}
+
+.catalog__card-item{/*грид элемет, котрый сам грид контейнер*/
+    grid-column: span 3; /*то есть каждая карточка занимает по 3 столбца*/
+
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 220px auto;
+    grid-gap: 0 24px;/*между рядами 17, между стлбцами 24*/
+    border: 1px solid #EAF2F6;
+}
+
+
+.card-horizontal{/*грид элемет, котрый сам грид контейнер*/
+
+    grid-column: 3/11; /*или можно так 3/-3*/
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-gap: 0;
+}
+
+
+.card-content{/*грид элемент*/
+    padding: 20px 24px 23px;
+    grid-row: 2/3;
+    background-color: #FFFFFF;
+}
+
+
+.card-content h3{
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 34px;
+    /* identical to box height, or 155% */
+
+
+    color: #333333;
+}
+
+.card-content p{
+    padding-bottom:  20px;
+
+    border-bottom: 2px solid #EAF2F6;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+
+    color: #333333;
+
+    opacity: 0.3;
+}
+
+.card-pic{/*грид элемент*/
+    grid-column: 1/2;
+    width: 327px;
+    height: 220px;
+}
+
+.card-horizontal .card-content{
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+}
+
+.card-list-information{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+
+.card-list-information__item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+
+
+.card-list-information__item span{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 36px;
+    /* identical to box height, or 112% */
+
+
+    color: #333333;
+}
+
+
+.feedback{/*грид конейтнер*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);/*если число рядов не указано, знаичт ряд 1ин*/
+    /*grid-template-rows: auto;*/
+    column-gap: 20px;
+    background-color: #ffffff;
+
+}
+
+.feedback header{/*грид элемет*/
+    grid-column: 2 / span 4;/*начиная со  2-го столбца  и на 4 колонки тянется*/
+    padding-top: 100px;
+
+}
+
+
+
+.feedback-form{/*грид элемет, котрый сам грид контенйер*/
+    width: 444px;
+    grid-column: 2 / span 4;/*начиная с  2-го столбца  и на 4 солбцов тянется*/
+
+    display: flex;
+    flex-direction: column; 
+    padding-bottom: 100px;     
+}
+
+.feedback-img{/*грид элемет*/
+    grid-column: 7 / span 6;/*начиная с  7-го столбца  и на 6 солбцов тянется*/
+    grid-row: 1/3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feedback-form__first-row{
+    display: flex;
+
+}
+
+
+.input-wrapper:nth-child(1),
+.input-wrapper:nth-child(2),
+.input-wrapper:nth-child(3){
+    margin-right: 20px;
+}
+
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+label{
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+
+    color: #333333;
+}
+
+.field{/*input*/
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #CFDCE3;
+    padding: 12px 16px;
+    box-sizing: border-box;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+
+.field::placeholder{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
+
+
+    color: #333333;
+
+    opacity: 0.3;
+}
+
+.titles, .name, .surname{
+    width: 132px;
+}
+
+
+.field:hover{/*наведение на поле*/
+    border: 2px solid #06A9B3;;
+    outline: none;
+}
+
+.field:focus{ /*фокус  в поле*/
+    border: solid 2px rgba(46, 136, 228, 0.52);
+
+    color: #323232;
+    outline: none;
+
+}
+
+
+.checkbox-field{
+    border: 1px solid #06A9B3;
+}
+
+
+.checkbox-field:hover{
+    border: 2px solid red;
+    outline: none;
+}
+
+
+
+
+
+
+.checkbox-container{
+    display: flex;
+    justify-content: space-between;
+
+    font-style: normal;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+}
+
+.policy .text-label,
+.subscribe .text-label{
+
+}
+
+.checkbox{
+    display: flex;/*чтоб посевдожелмент чекбокс был флекс элементом*/
+    justify-content: flex-start;
+
+}
+
+.checkbox::before{/*псевдоелмент чекбокс является флекс элементом*/
+    content: "";
+
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+
+    border: 1px solid #333333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-footer{/*грид элемент*/
+    grid-area: footer;
+}
+
