@@ -7,13 +7,14 @@ body {
     font-size: 16px;
     line-height: 32px;
     color: #333333;
+    counter-reset: section-counter;
 }
 
 
 html,
 body {
-    min-width: 1440px;/*ширина  мактеа*/
-    min-height: 4777px;
+    min-width: 1440px;/*ширина  саммого макета*/
+    min-height: 4777px;/*высота самогом акета*/
 }
 
 a {
@@ -107,7 +108,7 @@ p {
 
     grid-template-rows: auto 1fr auto;
     grid-column-gap: 65px;
-    grid-template-areas: 
+    grid-template-areas:
         /*1ин  столбец*/
         "header"
         "content"
@@ -148,19 +149,26 @@ p {
 }
 
 .search-container{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 30px;
+    padding: 25px 0 23px;
 }
 
 
+.search{/*a*/
+    display: block;
+    padding: 7px 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("img/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+
+}
 
 
 .user-nav{
     display: flex;
-
+    margin-left: 30px;
     align-items: center;
 }
 
@@ -239,7 +247,7 @@ grid-column-gap: 24px;
     font-weight: normal;
     font-size: 22px;
     line-height: 34px;
-    
+
 
 
     color: #333333;
@@ -265,14 +273,14 @@ grid-column-gap: 24px;
     margin-right: 50px;
     width: 44px;
     height: 44px;
-    
-    
+
+
 }
 
 .social-list__link{
-    
+
     width: 100%;
-    
+
     background-position: center;
     background-repeat: no-repeat;
     background-color: #CFDCE3;
@@ -295,9 +303,12 @@ grid-column-gap: 24px;
 .social-list__link--vk{
     background-image: url("img/vk.svg");
     background-size: 29px 17px;
-    
+
 }
 
+.welcom-img-container{
+    position: relative;
+}
 
 .welcom-img-container img{
     display: block;
@@ -306,20 +317,133 @@ grid-column-gap: 24px;
     object-fit: cover;
 }
 
+.slider-controls{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-wrapper{
+    height: 66px;
+}
+
+
+.slider__btn{
+    width: 105px;
+    height: 66px;
+    border: none;
+    background-color: #ffffff;
+}
+
+.slider__btn--next{
+    background-image:  url("img/arrow-right.svg");
+    background-size: 32px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider__btn--prev{
+    background-image:  url("img/arrow-right.svg");
+    background-size: 32px 18px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);/*перевлаичвает на 180 град*/
+}
+
+.slider-page{
+    text-align: right;
+    margin: 10px 30px 0 0;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 48px;
+
+    color: #FFFFFF;
+}
+
+
 .place{/*грид конетнер*/
     display: grid;
     grid-template-columns: repeat(12, 1fr);/*12 столбуов*/
     grid-column-gap: 24px;
-    margin-top:100px;
+    margin-top: 100px;
     margin-bottom: 100px;
+    position: relative; /*псевожлемент буем позиуинировать*/
+
 }
 
+
+.place::before{/*псевдоэлемент большими буквам надпись вертикальная  Место 01*/
+    content: "01";
+    position: absolute;
+
+    left: 145px;
+    top:  0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+    /* identical to box height, or 100% */
+
+
+    color: #EAF2F6;
+
+}
+
+.place::after{/*псевдоэлемент большими буквам надпись вертикальная  Место 01*/
+    content: "Место";
+    position: absolute;
+
+    left: 145px;
+    top: 60px;
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 65px;
+    color: #eaf2f6;
+    writing-mode: vertical-lr;/*вертикальняа надпись*/
+    transform: scale(-1, -1) translateY(-40px);
+}
 
 
 
 .place header{/*грид-элемент*/
     grid-column: 5/9;
 }
+
+
+.section h2{
+    position: relative;
+    padding-left: 115px; /*метсо дял псевдожлемента гор черта*/
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #06a9a3;
+    margin-bottom: 30px;
+}
+
+.section h2::before{
+    counter-increment: section-counter;     /* Инкрементирует счетчик*/
+    content: "0" counter(section-counter);  /* Отображает текущее значение счетчика */
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+.section h2::after{/*псевдоэлемнт гор черта*/
+    content: "";
+    position: absolute;
+
+    width: 81px;
+    height: 1px;
+    left: 25px;
+    top: 9px;
+
+    border-top: 1px solid #06a9b3;
+
+}
+
 
 .place-content{/*грид элемент, коырй сам грид контейнер*/
     grid-column: 1/-1;/*то есть все колонки*/
@@ -365,7 +489,7 @@ grid-column-gap: 24px;
 }
 
 .place-content blockquote{
-    grid-column: 4/10; 
+    grid-column: 4/10;
     margin: 20px 0 35px 0;
     position: relative;/*для псевдожлемента гизон черта*/
     font-style: normal;
@@ -411,7 +535,11 @@ grid-column-gap: 24px;
 }
 
 .catalog__title{
-    text-align: center;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 13px;
 }
 
 
@@ -536,7 +664,7 @@ grid-column-gap: 24px;
 .feedback{/*грид конейтнер*/
     display: grid;
     grid-template-columns: repeat(12, 1fr);/*если число рядов не указано, знаичт ряд 1ин*/
-    
+
     grid-gap: 20px;
     background-color: #ffffff;
 
@@ -555,8 +683,8 @@ grid-column-gap: 24px;
     grid-column: 2 / span 4; /*начиная с  2-го столбца  и на 4 столбца тянется*/
 
     display: flex;
-    flex-direction: column; 
-    padding-bottom: 100px;     
+    flex-direction: column;
+    padding-bottom: 100px;
 }
 
 .feedback-img{/*грид элемет*/
@@ -654,11 +782,11 @@ label{
 }
 
 .text-label {
-  max-width: 180px;
-  display: inline-block;
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 16px;
+    max-width: 180px;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 
@@ -687,13 +815,13 @@ label{
 .checkbox label::before{/*псевдоелмент квадратик для чекбокса*/
     content: "";
     position: absolute;
-    
+
     width: 18px;
     height: 18px;
-    
+
     top: 0;
     left: 0;
-   
+
 
     border: 1px solid #cfdce3;
 }
@@ -702,38 +830,48 @@ label{
 .checkbox label:hover::before{/*наведение на чекбокс*/
     content: "";
     position: absolute;
-    
+
     width: 18px;
     height: 18px;
-    
+
     top: 0;
     left: 0;
-   
+
 
     border: 1px solid #06A9B3;
 }
 
 
 
-.checkbox input:checked + label::after{/*чекнутый чкбокс*/ 
-    
+.checkbox input:checked + label::after{/*чекнутый чкбокс*/
+
     content: "";
     position: absolute;
     width: 12px;
     height: 12px;
-    
+
     left:4px;
     top: 4px;
-    
+
     background-color: #06A9B3;
-    
-    
+
+
 }
 
 
+.feedback-img{/*грид элемент*/
+    grid-column: 7/-1;
+    grid-row: 1/3;
+
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+
 .page-footer{/*грид элемент*/
     grid-area: footer;
-    
+    background-color: #F2F8FB;
+
 }
 
 .page-footer__wrapper{/*грид-контейнер*/
@@ -751,7 +889,7 @@ label{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 
