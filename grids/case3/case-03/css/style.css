@@ -90,8 +90,10 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+
   width: 36px;
   height: 32px;
+  
   margin-top: 10px;
   margin-bottom: 25px;
   padding: 0;

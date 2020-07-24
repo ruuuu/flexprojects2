@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,24 +11,27 @@
 
     </head>
 
-    <body class="page"><!--грид контенйер -->
-        <header class="page-header"><!--грид элемент -->
-            <nav class="page-nav container"><!--грид контеер -->
-                <div class="logo-container"><!--грид элемент-->
-                    <a class="logo" href="">
-                        <img class="logo-img" width="376" height="52" src="img/Group%20205.svg" alt="logo">
-                    </a>
-                </div> 
+    <body class="page">
+        <!--грид контенйер -->
+        <header class="page-header container">
+            <div class="logo-container">
+                <a class="logo" href="">
+                    <img class="logo-img" width="376" height="52" src="img/Group%20205.svg" alt="logo">
+                </a>
+            </div>
 
-                <div class="phone-container">
-                    +7 (981) 857-46-24
-                    Заказать звонок
-                </div>
+            <div class="phone-container">
+                <a class="page-header__phone" href="tel:+79818574624">+7 (981) 857-46-24 <span>Заказать звонок</span>           
+                </a> 
+            </div>
 
-                <div class="address-container">
-                    Санкт Петербург, набережная реки Карповки, дом 5, литер П
-                </div>
-            </nav>
+            <address class="page-header__address">
+                Санкт Петербург, набережная реки Карповки, дом 5, литер П
+            </address>
+
+            <div class="page-header__menu">
+                <button class="page-header-menu-button" type="button"><span class="visually-hidden">Открыть меню/Закрыть меню</span></button>
+            </div>
         </header>
 
         <main class="page-content"><!--грид элемент -->
@@ -36,29 +40,34 @@
                     <h1 class="promo__title">создадим эмоцию вашего интерьера</h1>
                     <p class="promo__text">Интерьерный текстиль по индивидуальным размерам с доставкой на дом </p>
                     <div class="promo__button-wrapper"><!-- оберкта, чтобы грид элемент не растягивался на всю ширину грид-ячейки. -->
-                        <a class="button" href="">Получить консультацию</a>   
+                        <a class="button" href="">Получить консультацию</a>
                     </div>
-                    <div class="promo__img-container"><!--грид элемент-->
-                        <img src="img/image-promo.svg" width="573" height="520" alt="promo">
-                    </div>
+                    <!--грид элемент-->
+                    <img src="img/image-promo.svg" width="573" height="520" alt="promo">
+
                 </div>
             </div>
 
             <section class="about container"><!-- грид контейнер-->
-
-                <header class="section-header">
-                    <h2>О компании</h2>
-                    <p>About us</p>
+                <header class="section-header"><!--грид элемент, котрый сам  грид контейнер-->
+                    <h2>О компании</h2><!-- грид элемент-->
+                    <p>About us</p><!-- грид элемент-->
                 </header>
 
                 <p class="about__paragraph">
-                    Дорогие друзья! От имени команды Artendo textile studio, приветствую Вас на нашем сайте. Премиальный европейский текстиль – одно из самых главных направлений работы коллектива. Создавать неповторимые интерьеры для наших дорогих клиентов, уделяя внимание мельчайшим деталям – вот то, что по-настоящему вдохновляет дизайнеров нашей студии. Наш коллектив сделает все, чтобы после сотрудничества с нами, Вам было приятно сказать: « Да! Это именно то, что действительно достойно моего дома!»
+                    Дорогие друзья! От имени команды Artendo textile studio, приветствую Вас на нашем сайте. 
+                </p>
+                <p class="about__paragraph">
+                    Премиальный европейский текстиль – одно из самых главных направлений работы коллектива. Создавать неповторимые интерьеры для наших дорогих клиентов, уделяя внимание мельчайшим деталям – вот то, что по-настоящему вдохновляет дизайнеров нашей студии. 
+                </p>
+                <p class="about__paragraph">
+                    Наш коллектив сделает все, чтобы после сотрудничества с нами, Вам было приятно сказать: « Да! Это именно то, что действительно достойно моего дома!»
                 </p>
 
                 <div class="promo__container-right">
                     <img src="img/image-06.jpg" width="276" height="160" alt="promo-image1">
-                    <p>Недавно мы писали статью о тканях, которые используем в работе, и источниках вдохновения. 
-                    </p>  
+                    <p>Недавно мы писали статью о тканях, которые используем в работе, и источниках вдохновения.
+                    </p>
                 </div>
 
                 <img class="big-picture" src="img/promo-big-image.png" width="1166" height="304" alt="promo-big-image">
@@ -73,14 +82,13 @@
                 </div>
 
                 <p class="about__paragraph">Мы не хотим просто делать текстиль. Мы хотим его создать. Мы хотим, чтобы он был исключительным и отличался, сохраняя качество на максимальном уровне.</p>
-
             </section>
 
+           
             <section class="popular container"><!-- грид контейнер-->
-
                 <header class="section-header">
-                    <h2>Для вас только самое лучшее</h2>
-                    <p>The best</p>
+                    <h2>Для вас только самое лучшее</h2><!-- грид элемент-->
+                    <p>The best</p><!-- грид элемент-->
                 </header>
 
                 <ul class="popular__list">
@@ -89,10 +97,10 @@
                             <img src="img/card-popular1.png" width="375" height="240" alt="card">
                         </div>
                         <div class="popular__item-content">
-                            <p>Подушки Casa Nova</p>
-                            <p class="popular__price">от 15000 р</p>
-                            <p>*стоимость варьируется в зависимости от размера изделия</p>
-                            <a href="">Заказать</a>
+                            <p class="popular__item-name">Подушки Casa Nova</p>
+                            <p class="popular__item-price">от 15000 р</p>
+                            <p class="popular__item-description">*стоимость варьируется в зависимости от размера изделия</p>
+                            <a class="popular__item-button" href="">Заказать</a>
                         </div>
                     </li>
 
@@ -101,10 +109,10 @@
                             <img src="img/card-popular2.png" width="375" height="240" alt="card">
                         </div>
                         <div class="popular__item-content">
-                            <p>Подушки Casa Nova</p>
-                            <p class="popular__price">от 15000 р</p>
-                            <p>*стоимость варьируется в зависимости от размера изделия</p>
-                            <a href="">Заказать</a>
+                            <p class="popular__item-name">Подушки Casa Nova</p>
+                            <p class="popular__item-price">от 15000 р</p>
+                            <p class="popular__item-description">*стоимость варьируется в зависимости от размера изделия</p>
+                            <a class="popular__item-button" href="">Заказать</a>
                         </div>
                     </li>
 
@@ -113,10 +121,10 @@
                             <img src="img/card-popular3.jpg" width="375" height="240" alt="card">
                         </div>
                         <div class="popular__item-content">
-                            <p>Подушки Casa Nova</p>
-                            <p class="popular__price">от 15000 р</p>
-                            <p>*стоимость варьируется в зависимости от размера изделия</p>
-                            <a href="">Заказать</a>
+                            <p class="popular__item-name">Подушки Casa Nova</p>
+                            <p class="popular__item-price">от 15000 р</p>
+                            <p class="popular__item-description">*стоимость варьируется в зависимости от размера изделия</p>
+                           <a class="popular__item-button" href="">Заказать</a>
                         </div>
                     </li>
 
@@ -125,10 +133,10 @@
                             <img src="img/image-10.jpg" width="178" height="264" alt="card">
                         </div>
                         <div class="popular__item-content">
-                            <p>Подушки Casa Nova</p>
-                            <p class="popular__price">от 15000 р</p>
-                            <p>*стоимость варьируется в зависимости от размера изделия</p>
-                            <a href="">Заказать</a>
+                            <p class="popular__item-name">Подушки Casa Nova</p>
+                            <p class="popular__item-price">от 15000 р</p>
+                            <p class="popular__item-description">*стоимость варьируется в зависимости от размера изделия</p>
+                           <a class="popular__item-button" href="">Заказать</a>
                         </div>
                     </li>
 
@@ -137,21 +145,20 @@
                             <img src="img/image-53.jpg" width="178" height="264" alt="card">
                         </div>
                         <div class="popular__item-content">
-                            <p>Подушки Casa Nova</p>
-                            <p class="popular__price">от 15000 р</p>
-                            <p>*стоимость варьируется в зависимости от размера изделия</p>
-                            <a href="">Заказать</a>
+                            <p class="popular__item-name">Подушки Casa Nova</p>
+                            <p class="popular__item-price">от 15000 р</p>
+                            <p class="popular__item-description">*стоимость варьируется в зависимости от размера изделия</p>
+                            <a class="popular__item-button" href="">Заказать</a>
                         </div>
                     </li>
                 </ul>
-
             </section>
 
             <section class="projects">
                 <div class="container">
                     <header class="section-header">
-                        <h2>Нам есть чем гордиться!</h2>
-                        <p>Projects</p>
+                        <h2>Нам есть чем гордиться!</h2><!-- грид элемент-->
+                        <p>Projects</p><!-- грид элемент-->
                     </header>
 
                     <div class="projects__content"><!--грид контенйер -->
@@ -159,53 +166,164 @@
                             <img src="img/image-27.jpg" width="968" height="660" alt="image-slide">
                             <div class="slider__description">
                                 <h3>Оформление коттеджа</h3>
-                                <a href="">Подробнее</a>
+                                <a class="podrobnee" href="">Подробнее</a>
                             </div>
                         </div>
-                        <button class="slider__btn slider__btn--prev"><!-- грид элемент--></button>
-                        <button class="slider__btn slider__btn--next"><!-- грид элемент--></button>
+                        <button class="slider__btn slider__btn--prev"><!--грид элемент-->
+                            <span class="visually-hidden">Назад</span>
+                            </button>
+                        <button class="slider__btn slider__btn--next"><!--грид элемент-->
+                            <span class="visually-hidden">Вперед</span>
+                            </button>
                     </div>
                 </div>
             </section>
 
             <section class="mission">
                 <div class="mission__content container"><!--грид контейнер-->
-                    <header class="section-header"><!--грид элемент-->
-                        <h2>Наша миссия и видение</h2>
-                        <p>Mission</p>
+                    <header class="section-header section-header--light"><!--грид элемент-->
+                        <h2>Наша миссия и видение</h2><!-- грид элемент-->
+                        <p>Mission</p><!-- грид элемент-->
                     </header>
 
                     <div class="mission-text"><!--грид элемент-->
                         <p>
-                            Мы не хотим просто делать текстиль. Мы хотим, чтобы он был исключительным и отличался, сохраняя качество на максимальном уровне. 
+                            Мы не хотим просто делать текстиль. Мы хотим, чтобы он был исключительным и отличался, сохраняя качество на максимальном уровне.
                         </p>
                         <p>
-                            Продукты ABOJUR гарантируют вам оригинальный дизайн с превосходной отделкой ткани и изумительными элементами декора, которые сделают ваш интерьер уникальным. 
+                            Продукты ABOJUR гарантируют вам оригинальный дизайн с превосходной отделкой ткани и изумительными элементами декора, которые сделают ваш интерьер уникальным.
                         </p>
                     </div>
-                    
-                    
-                    <video src="img/video-poster.png" width="573" height="598"><!--грид элемент-->
+
+
+                    <video src="img/video-poster.png" width="573" height="598">
+                        <!--грид элемент-->
                         <source src="https://www.youtube.com/watch?v=uB6cocwH3Ws" type="video/mp4">
                     </video>
-                    
+
                     <!--грид элемент-->
-                    <img src="img/img-small.png" width="276" height="200" alt="small-img">
+                    <img  class="mission__img-small" src="img/img-small.png" width="276" height="200" alt="small-img">
                     <!--грид элемент-->
-                    <img src="img/img-big.png" width="573" height="360" alt="big-img">
+                    <img class="mission__img-big" src="img/img-big.png" width="573" height="360" alt="big-img">
                 </div>
             </section>
 
+            <section class="our-team">
+                <div class="container">
+                    <header class="section-header section-header--light">
+                        <!--грид элемент-->
+                        <h2>Наша творческая команда</h2>
+                        <p>our team</p>
+                    </header>
+
+                    <div class="our-team__content"><!-- грид конетйнер-->
+                        <p class="our-team__paragraph">
+                            Мы - студия текстиля и дизайна, которая хочет стать частью большой истории. Будь то уютный стул, цветочное растение или стена, которую нужно разрушить, чтобы расширить комнату, все это одинаково важно для нас. 
+                        </p>
+                        <p class="our-team__paragraph">Работая по всей России, мы заботимся о том, как ваше пространство выглядит, чувствует и говорит. Все проекты созданы для людей. И это наш приоритет.
+                        </p> 
+
+                        <p class="our-team__paragraph-small">
+                            Мы разработали проекты различного масштаба и имеем большой опыт работы во всех регионах.
+                        </p>
+
+                        <img src="img/Rectangle%2059.png" width="1165" height="420" alt="background-out-team">
+                    </div>
+                </div>
+            </section>
+
+            <section class="collections">
+                <div class="container">
+                    <header class="section-header">
+                        <h2>Метаморфозы</h2>
+                        <p>Collections</p>
+                    </header>
+
+                    <div class="collections__content"><!--грид контейнер -->
+                        <p class="collections__paragraph"><!--грид элемент-->
+                            В нашем ассортименте представлено 258 коллекций, новые поставки происходят регулярно так как мы следим за трендами, актуальными новинками и посещаем международные выставки.
+                        </p>
+
+                        <ul class="collections__list"><!--грид элемент, котырй сам грид контейнер-->
+                            <li class="collections__item collections__item--big">
+                                <img src="img/collection1.png" width="573" height="500" alt="collection1">
+                            </li>
+
+                            <li class="collections__item">
+                                <img src="img/collection2.png" width="573" height="240" alt="collection2">
+                            </li>
+
+                            <li class="collections__item">
+                                <img src="img/collectoon3.png" width="573" height="240" alt="collection3">
+                            </li>
+
+                            <li class="collections__item">
+                                <img src="img/collection4.png" width="573" height="240" alt="collection4">
+                            </li>
+
+                            <li class="collections__item collections__item--big">
+                                <img src="img/collection6.png" width="573" height="500" alt="collection6">
+                            </li>
+
+                            <li class="collections__item">
+                                <img src="img/collection5.png" width="573" height="240" alt="collection5">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feedback">
+                <div class="feedback__content container"><!--грид контейнер-->
+                    <header class="section-header section-header--light"><!--грид элемент-->
+                        <h2>Мы всегда рады общению</h2>
+                        <p>Talk</p>
+                    </header>
+
+                    <p class="feedback__text"><!--грид элемент-->
+                        Оставьте свои контакты. Менеджер перезвонит в удобное вам время и ответит на все вопросы. 
+                    </p>
+
+                    <form class="feedback-form" method="POST" action=""><!--грид элемент-->
+                        <div class="feedback-form__content">
+                            <p class="feedback-form__input-wrapper">
+                                <label class="visually-hidden" for="name">Ваше имя</label>
+                                <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Ваше имя" required> <!-- обязательное к заполнению-->  
+                            </p>
+
+                            <p class="feedback-form__input-wrapper">
+                                <label class="visually-hidden" for="phone">Введите телефон</label>
+                                <input class="feedback-form__input" type="tel" name="phone"  id="phone" placeholder="Введите телефон" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><!-- обязательное к заполнению-->  
+                            </p>
+
+                            <div class="wrapper_for-period-checkbox">
+                                <p class="period">
+                                    <label class="visually-hidden" for="period">Удобное время</label>
+                                    <select class="select-filed" name="period" id="period">
+                                        <option value="" disabled selected>Удобное время</option>
+                                        <option value="1">Утро</option>
+                                        <option value="2">День</option>
+                                        <option value="3">Вечер</option> 
+                                    </select>
+                                </p>
+
+                                <p class="checkbox-wrapper">
+                                    <input class="visually-hidden checkbox-filed" type="checkbox" name="agreements" id="agreements">
+                                    <label class="text-label" for="agreements">Согласие на обработку персональных данных</label>
+                                </p>
+                            </div>
+
+                            <div class="submit">
+                                <button class="button button-form" type="submit">
+                                    Оставить заявку
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.649517454573!2d37.536972750855895!3d55.74721839979557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdd017303b9%3A0xd1f63f945a2450c2!2z0JzQvtGB0LrQstCwINCh0LjRgtC4!5e0!3m2!1sru!2sru!4v1595232554681!5m2!1sru!2sru" width="474" height="734" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </section>
         </main>
-
-        <footer class="page-footer"><!--грид элемент -->
-            <div class="page-footer__wrapper container">
-                <a class="footer-logo" href="">
-                    <img class="logo-img" width="97" height="30" src="img/footer-logo.svg" alt="logo-footer">
-                </a>
-
-            </div>
-        </footer>
-
     </body>
 </html>
