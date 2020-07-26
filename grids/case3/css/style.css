@@ -13,11 +13,7 @@ body {
 }
 
 
-html,
-body {
-    min-width: 1366px;/*ширина  макета*/
 
-}
 
 a {
     text-decoration: none;
@@ -151,33 +147,39 @@ background-color:  #06A9B3;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
+    
     padding-bottom: 10px;
     padding-top: 10px;
-
     align-items: center;
 }
 
 
-.logo-container{
+.logo{/*грид элемент*/
     grid-column: 1/5; /*либо так 1 / span 4;*/
 
 }
 
 
-.phone-container{
+.page-header__phone{/*грид элемент, котрый сам грид контенйер*/
     grid-column: 7/9;/*либо так можно 7 / span 2;*/
 
     display: grid;
     grid-template-columns: auto auto;/*грид элемнет делаем грид конйтенером чтоб позиционировать иконку слева*/
-    grid-column-gap: 10px;
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    line-height: 24px;
+    color: #695a59;
+    text-decoration: none;
 }
 
-.phone-container::before{/*псевоэлемент - телефон  в грид контенере ведет себя как грид элемент*/
+
+.page-header__phone span{
+    grid-column: 2/3;
+    text-decoration: underline;
+}
+
+.page-header__phone::before{/*псевоэлемент - телефон  в грид контенере ведет себя как грид элемент*/
     content: "";
 
     width: 18px;
@@ -189,9 +191,6 @@ background-color:  #06A9B3;
 
 }
 
-.page-header__phone{
-    color: #695A59;
-}
 
 
 .page-header__address{
@@ -271,9 +270,9 @@ background-color:  #06A9B3;
 
 .promo__title{/*грид элемент*/
     grid-row: 1/2;
-    grid-column: 2/7;
-    /*grid-area: 1/2/2/7;*/
-    padding-top: 100px;
+    grid-column: 2/7; /*либо так 2 / span5*/
+
+
 
     font-family: "Old Standard TT", sans-serif;
     font-style: normal;
@@ -290,21 +289,22 @@ background-color:  #06A9B3;
 
 
 .promo__text{/*грид элемент*/
-    grid-row: 2/3;
-    grid-column: 2/7;
-    /*grid-area: 3/2/4/7;*/
+
+    grid-column: 2/7; /*либо так 2 / span 5;*/
+    margin-bottom: 30px;
+
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 32px;
-    color: #EEE9E6;
+    color: #a29e9d;
     opacity: 0.6;
+
 }
 
 
 .promo__button-wrapper{/*грид элемент*/
-    grid-row: 3/4;
-    grid-column: 2/5;
+    grid-column: 2/5; /* либо так 2 / span 3;*/
 }
 
 
@@ -346,7 +346,30 @@ background-color:  #06A9B3;
     font-weight: 500;
     font-size: 18px;
     line-height: 32px;
-    color: #695A59;
+
+
+
+}
+
+.about-paragraph-beautiful{/*грид элемент*/
+    grid-column: 1/-1;
+
+    padding: 80px;
+    width: 1166px;
+    height: 304px;
+    box-sizing: border-box;/*паддинги входят в ширину 1166зч*/
+    margin-bottom: 44px;
+
+    font-size: 26px;
+    line-height: 48px;
+    color: #ffffff;
+    background-image: url("../img/promo-big-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+
 }
 
 .promo{
@@ -401,8 +424,22 @@ background-color:  #06A9B3;
     grid-row: 2/3;
 }
 
-.popular{
+.promo__container-left-information a{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
 
+    text-decoration-line: underline;
+
+    color: #9A8584;
+
+}
+
+
+.popular{
+    padding-bottom: 105px;
 }
 
 .popular h2{
@@ -422,6 +459,8 @@ background-color:  #06A9B3;
     grid-template-columns: 4fr;
     grid-template-rows: 240px auto;
     grid-gap: 0 20px;
+
+    background-color: #ffffff;
 }
 
 
@@ -435,15 +474,11 @@ background-color:  #06A9B3;
 
 .popular__item-content{
     padding: 36px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .popular__item-name{
-     margin-bottom: 20px;
-    
+    margin-bottom: 22px;
+
     font-family: "Old Standard TT", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -477,8 +512,8 @@ background-color:  #06A9B3;
     margin-top: auto;/*флекс элемент прижмется  к низу контенйера*/
     display: flex;/*чтобы псевдоэлемент-стрелка была флекс элементом*/
     justify-content: flex-start;
-    
-    
+
+
     align-items: center;
     font-style: normal;
     font-weight: bold;
@@ -492,7 +527,7 @@ background-color:  #06A9B3;
     content: "";
     width: 81px; /*размры стрелки*/
     height: 8px;
-    
+
     background-image: url("../img/Line%205.svg");
     background-position: ;
     background-repeat: no-repeat;
