@@ -9,10 +9,9 @@
     </head>
 
     <body class="page container"><!--грид контенер -->
-
         <header class="page-header"><!--шапка грид элемент, ктрый сам грид конетнер -->
             <a class="logo" href=""><!-- грид элемент-->
-                <img class="logo-img" width="98" height="40" src="img/logo.svg" alt="">
+                <img class="logo-img" width="98" height="40" src="img/logo.svg" alt="logo">
             </a>
 
             <ul class="breadcrumbs-list"><!-- грид элемент-->
@@ -28,7 +27,10 @@
             </ul>
 
             <div class="theater-container"><!-- грид элемент-->
-                <button>Кинотеатр на корповке</button>
+                <p class="theater">
+                    <a class="theater-name" href="">Кинотеатр «На Карповке»</a>
+                    <button class="theater-button"><span class="visually-hidden">Открыть/Закрыть меню</span></button>
+                </p>
             </div>
         </header>
 
@@ -59,7 +61,7 @@
                 </li>
 
                 <li class="page-menu__item">
-                    <a class="page-menu__link page-menu__link--utem5" href="">
+                    <a class="page-menu__link page-menu__link--item5" href="">
                         Контакты
                     </a>
                 </li>
@@ -67,14 +69,14 @@
 
             <ul class="page-menu-tools">
                 <li class="page-menu-tools__item">
-                    <a class="page-menu-tools__link" href=""></a>
+                    <a class="page-menu-tools__link" href="">Аккаунт</a>
                 </li>
             </ul>
         </nav>
 
         <main class="page-main"><!--грид элемент, котрый сам грид контенер-->
             <section class="choice"><!--грид элемент -->
-              
+
                 <div class="buttons-container">
                     <button class="calendar-button calendar-button--prev" type="button">
                         <span class="visually-hidden">Назад</span>
@@ -107,49 +109,44 @@
                         <span class="visually-hidden">Вперед</span>
                     </button>
                 </div>
-                
+
                 <div class="section-2d">
-                   <p class="choice-label">2D:</p> 
-                   <ul class="time-list">
-                       <li class="time-list__item">
-                           <button class="time-list__button" type="button">
-                              <span>12:00 - 13:30</span>
-                           </button>
-                       </li>
-                       <li class="time-list__item">
-                           <button class="time-list__button" type="button">
-                              <span>16:30 - 18:00</span>
-                           </button>
-                       </li>
-                       <li class="time-list__item">
-                           <button class="time-list__button time-list__button--current" type="button">
-                              <span>12:00 - 13:30</span>
-                           </button>
-                       </li>
-                   </ul>
-                </div>
-                
-                <div class="section-3d">
-                   <p class="choice-label">3D:</p> 
-                   <ul class="time-list">
-                       <li class="time-list__item">
-                           <button class="time-list__button" type="button">
-                              <span>12:00 - 13:30</span>
-                           </button>
-                       </li>
-                       <li class="time-list__item">
-                           <button class="time-list__button" type="button">
-                              <span>12:00 - 13:30</span>
-                           </button>
-                       </li>
+                    <p class="choice-label">2D:</p> 
+                    <ul class="time-list">
+                        <li class="time-list__item">
+                            <button class="time-list__button" type="button">
+                                <span>12:00 - 13:30</span>
+                            </button>
+                        </li>
+                        <li class="time-list__item">
+                            <button class="time-list__button" type="button">
+                                <span>16:30 - 18:00</span>
+                            </button>
+                        </li>
+                        <li class="time-list__item">
+                            <button class="time-list__button time-list__button--current" type="button">
+                                <span>12:00 - 13:30</span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
-                
-                
-                <div class="screen">
-                   <p>Экран</p>
+
+                <div class="section-3d">
+                    <p class="choice-label">3D:</p> 
+                    <ul class="time-list">
+                        <li class="time-list__item">
+                            <button class="time-list__button" type="button">
+                                <span>12:00 - 13:30</span>
+                            </button>
+                        </li>
+                        <li class="time-list__item">
+                            <button class="time-list__button" type="button">
+                                <span>12:00 - 13:30</span>
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-                
+
                 <div class="seat-container">
                     <p class="choice-label choice-label__row1">Ряд1</p>
                     <ul class="seat-list">
@@ -158,25 +155,25 @@
                                 1
                             </button>
                         </li>
-                        
+
                         <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 2
                             </button>
                         </li>
-                        
+
                         <li class="seat-list__item">
                             <button class="seat-list__button seat-list__button--free" type="button">
                                 3
                             </button>
                         </li>
-                        
+
                         <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 4
                             </button>
                         </li>
-                        
+
                         <li class="seat-list__item">
                             <button class="seat-list__button seat-list__button--active" type="button">
                                 5
@@ -184,8 +181,8 @@
                         </li>
                     </ul>
                 </div>
-                
-                <div class="seat-container">
+
+                <div class="seat-container last">
                     <p class="choice-label choice-label__row2">Ряд2</p>
                     <ul class="seat-list">
                         <li class="seat-list__item">
@@ -193,49 +190,49 @@
                                 1
                             </button>
                         </li>
-                        
-                         <li class="seat-list__item">
+
+                        <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 2
                             </button>
                         </li>
-                        
-                         <li class="seat-list__item">
+
+                        <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 3
                             </button>
                         </li>
-                        
-                         <li class="seat-list__item">
+
+                        <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 4
                             </button>
                         </li>
-                        
-                         <li class="seat-list__item">
+
+                        <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 5
                             </button>
                         </li>
-                        
-                         <li class="seat-list__item">
+
+                        <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 6
                             </button>
                         </li>
-                        
-                         <li class="seat-list__item">
+
+                        <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 7
                             </button>
                         </li>
-                        
-                         <li class="seat-list__item">
+
+                        <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 8
                             </button>
                         </li>
-                        
+
                         <li class="seat-list__item">
                             <button class="seat-list__button" type="button">
                                 9
@@ -243,7 +240,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <ul class="set-param-list">
                     <li class="set-param seat-param--occupied">
                         Место занято
@@ -252,13 +249,71 @@
                         Место свободно
                     </li>
                     <li class="set-param seat-param--current">
-                       Выбранное место
+                        Выбранное место
                     </li>
                 </ul>
             </section>
 
             <section class="result"><!--грид элемент -->
-                fghfgh fgh
+                <div class="ticket-param-container">
+
+                    <div class="ticket-wrapper">
+                        <div class="ticket-param-container__header">
+                            <h3>Билеты</h3>
+                            <p>x2</p>
+                        </div>
+                        <div class="ticket-param-container__info">
+                            <ul class="ticket-container">
+                                <li class="ticket-container__item">
+                                    <span class="item-header">Фильм:</span>     <span class="item-body">Кекс наносит ответный удар</span>
+                                </li>
+                                <li class="ticket-container__item">
+                                    <span class="item-header">Дата:</span>     <span class="item-body">23 сентября</span>
+                                </li>
+                                <li class="ticket-container__item">
+                                    <span class="item-header">Время:</span>     <span class="item-body">20:00</span>
+                                </li>
+                                <li class="ticket-container__item">
+                                    <span class="item-header">Ряд:</span>       <span class="item-body">2</span>
+                                </li>
+                                <li class="ticket-container__item">
+                                    <span class="item-header">Места:</span>     <span class="item-body">4,5</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ticket-param-container__backode">
+                            <img src="img/bar-code.svg" width="180" height="26" alt="Штрих код покупки">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-container">
+                    <h3>Оплата</h3>
+                    <div class="card">
+                        <div class="card__logo">
+                            <img src="img/logo-card.svg" width="35" height="18" alt="logo-card"> 
+                            <p> SuperCard</p>
+                        </div> 
+
+                        <div class="card__number">
+                            <span>1234</span>
+                            <span>5678</span>
+                            <span>9012</span>
+                            <span>3456</span>
+                        </div> 
+
+                        <div class="card__info">
+                            <p class="card-name">Opoznanniy Enot</p>
+                            <p class="card-validate-day">20/99</p>
+                        </div> 
+                    </div>
+
+                    <button class="payment-add-button" type="button">
+                        <span class="visually-hidden">Добавить карту</span>
+                    </button>
+                    <button class="result-button" type="button">Оплатить 800р</button>
+                </div>
             </section>
         </main>
     </body>

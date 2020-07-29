@@ -74,8 +74,89 @@ p {
 
 .breadcrumbs-list{
     display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 
 }
+
+.breadcrumbs-list__item{
+    position: relative; /*галочки позициониовтаь будем относительно этого элемента*/
+    margin-right: 40px;
+
+}
+
+
+.breadcrumbs-list__item::after{/*псевдоэлемент галочка*/
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: -20px;
+
+    width: 10px;
+    height: 6px;
+
+
+    background-image: url("../img/arroe-right-menu.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 6px;
+    background-position: center;
+}
+
+
+
+.breadcrumbs-list__item--active::after{/*у поледнего элемента галочку не тображаем*/
+    display: none;
+}
+
+.item-link{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #5957DB;
+}
+
+
+.breadcrumbs-list__item--active a{
+    color: #666666;
+}
+
+
+.theater-container{
+    display: flex;
+    align-items: center;
+}
+
+.theater{
+    display: flex;
+    align-items: center;
+}
+
+.theater-name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    color: #5957DB;
+
+    text-decoration: none;
+}
+
+.theater-button{
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    background-image: url("../img/Arrow-down.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+
+
+
 
 
 /*навигация*/
@@ -87,7 +168,9 @@ p {
     grid-template-rows: 1fr 62px;
     grid-template-columns: 260px;/**/
 
+    padding-bottom: 40px;
     background-color: #5957DB;
+
 }
 
 
@@ -103,15 +186,16 @@ p {
 .page-menu__item--active{
     margin-left: 30px;
     background-color: #ECF2FF;
-    
+
     border-top-left-radius: 23px;
     border-bottom-left-radius: 23px;
 }
 
 
 
-.page-menu__link{/* a */
-    display: flex; /*тогда псевдожемнет иконка будет флекс элементом*/
+.page-menu__link,
+.page-menu-tools__link{/* a */
+    display: flex; /*тогда псевдоэлемнет иконка будет флекс элементом*/
     align-items: center;
     padding: 20px 50px;
 
@@ -127,7 +211,7 @@ p {
 
 .page-menu__link::before{/*псевдоэлемент иконка ведет себя как флекс элемент */
     content: "";
-    
+
     width: 18px;
     height: 22px;
     margin-right: 10px;
@@ -153,8 +237,43 @@ p {
 }
 
 
+.page-menu__link--item3::before{
+    background-image: url("../img/item3.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
 
 
+.page-menu__link--item4::before{
+    background-image: url("../img/item4.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+
+
+.page-menu__link--item5::before{
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/item5.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+
+
+.page-menu-tools__link::before{/*псевдоэлемент иконка ведет себя как флекс элемент */
+    content: "";
+
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    background-image: url("../img/item6.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+
+}
 
 
 
@@ -164,7 +283,7 @@ p {
 
     display: grid;
     grid-template-columns: 1fr 360px;
-
+    grid-template-areas: "choice result"; /*одна стока, 2 столбца*/
 }
 
 .choice{/*грид элемент*/
@@ -271,9 +390,20 @@ p {
     margin-bottom: 40px;
 }
 
+.section-3d{
+    margin-bottom: 160px;
+}
 
 .choice-label{
     margin-right: 83px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+
+
+    text-transform: uppercase;
+
+    color: #666666;
 }
 
 .time-list{
@@ -318,31 +448,19 @@ p {
 }
 
 
-.screen{
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-
-    background-image: url("../img/screen.svg");
-    background-repeat: no-repeat;
-    background-size: 1180px 60px;
-
-    font-weight: bold;
-    text-transform: uppercase;
-    color: red;
-
-}
-
-
-.screen-text{
-
-}
-
 .seat-container{
     display: flex;
+    align-items: center;
     margin-bottom: 30px;
+}
+
+.last{
+    margin-bottom: 80px;
+}
+
+.choice{
+    display: grid;
+    grid-area: 
 }
 
 .choice-label__row1{
@@ -376,6 +494,15 @@ p {
     border: none;
     background-color: #ffffff;
     color: #CCDAF4;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #CCDAF4;
 }
 
 .seat-list__button--free{
@@ -395,11 +522,18 @@ p {
 .set-param-list{
     display: flex;
     align-items: flex-end;
+    padding-left: 30px;
 }
 
 .set-param{
     margin-right: 72px;
     position: relative;/*чекбокс относительно этого эдемента позиционируем*/
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666666;
+
 }
 
 
@@ -416,7 +550,9 @@ p {
 }
 
 .seat-param--occupied::before{
-    background-color: #E5E5E5;
+    background-color: #ffffff;
+    border: 2px solid #ECF2FF;
+    box-sizing: border-box;
 }
 
 .seat-param--free::before{
@@ -434,4 +570,181 @@ p {
     background-color: #ECF2FF;
 }
 
+.ticket-param-container{
+    padding: 30px 60px;
+    background-color: #5957DB;
 
+}
+
+.ticket-wrapper{
+
+
+}
+
+.ticket-param-container__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+    background-color: #43D000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 8px 8px 0px 0px;
+
+}
+
+
+.ticket-param-container__info{
+    padding: 30px;
+    background-color: #ffffff;
+
+}
+
+
+.ticket-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.ticket-container__item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.ticket-container__item:last-child{
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    border-bottom: 2px dashed #ECF2FF;
+}
+
+
+.ticket-container__item:first-child .item-header{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.item-header{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #AAAAAA;
+}
+
+.item-body{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #666666;
+}
+
+.ticket-param-container__backode{
+    background-color: #ffffff;
+    padding: 30px;
+    padding-top: 0; 
+    border-radius: 0px 0px 8px 8px;
+}
+
+
+.payment-container{
+    padding: 60px;
+}
+
+.payment-container h3{
+    margin-bottom: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    background-color: #5957DB;
+    box-shadow: 0px 8px 20px rgba(89, 87, 219, 0.6);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card__logo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.card__logo p{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.card__number{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card__number span{
+    font-family: "Courier New", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+
+}
+
+.card__info{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.card__info p{
+    font-family: "Courier New", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.payment-add-button{
+    width: 100%;/*ширина такая же как и у родителя*/
+    padding: 22px 112px;
+    margin-bottom: 60px;
+    border: 2px solid #CCDAF4;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #ECF2FF; 
+
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px 16px;
+}
+
+.result-button{
+    width: 100%;/*ширина такая же как и у родителя*/
+    padding: 20px;
+    min-height: 60px;/*нсли тектс будем добавлять еще на кнопке, то чтобы он не выпал из кнопки*/
+    background-color: #43D000;
+    border-radius: 30px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+}
